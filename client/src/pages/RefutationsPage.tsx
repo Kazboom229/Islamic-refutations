@@ -90,6 +90,7 @@ export default function RefutationsPage() {
   const tabs = [
     { id: 'all', label: language === 'en' ? 'All Refutations' : 'Dhammaan Diidmooyinka' },
     { id: 'philosophical', label: language === 'en' ? 'Philosophical' : 'Falsafadeed' },
+    { id: 'scientific', label: language === 'en' ? 'Scientific' : 'Sayniska' },
     { id: 'historical', label: language === 'en' ? 'Historical' : 'Taariikheed' },
     { id: 'quranic', label: language === 'en' ? 'Quranic' : 'Quraanka' },
     { id: 'modern', label: language === 'en' ? 'Modern' : 'Casriga ah' },

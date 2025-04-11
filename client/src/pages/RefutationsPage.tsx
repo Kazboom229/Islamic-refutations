@@ -11,16 +11,63 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Skeleton } from '@/components/ui/skeleton';
 import { ArrowRight, ChevronRight, ExternalLink, Eye, Search } from 'lucide-react';
 
+function AddRefutationForm() {
+  const [titleEn, setTitleEn] = useState('');
+  const [titleSo, setTitleSo] = useState('');
+  const [excerptEn, setExcerptEn] = useState('');
+  const [excerptSo, setExcerptSo] = useState('');
+  const [tags, setTags] = useState('');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch('/api/refutations', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ title_en: titleEn, title_so: titleSo, excerpt_en: excerptEn, excerpt_so: excerptSo, tags: tags.split(',') }),
+      });
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      // Handle successful submission, e.g., clear form, show success message
+      setTitleEn('');
+      setTitleSo('');
+      setExcerptEn('');
+      setExcerptSo('');
+      setTags('');
+      alert('Refutation added successfully!');
+    } catch (error) {
+      console.error('Error adding refutation:', error);
+      alert('Error adding refutation. Please try again.');
+    }
+  };
+
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <Input type="text" label="Title (English)" value={titleEn} onChange={(e) => setTitleEn(e.target.value)} />
+      <Input type="text" label="Title (Somali)" value={titleSo} onChange={(e) => setTitleSo(e.target.value)} />
+      <Input type="text" label="Excerpt (English)" value={excerptEn} onChange={(e) => setExcerptEn(e.target.value)} />
+      <Input type="text" label="Excerpt (Somali)" value={excerptSo} onChange={(e) => setExcerptSo(e.target.value)} />
+      <Input type="text" label="Tags (comma-separated)" value={tags} onChange={(e) => setTags(e.target.value)} />
+      <Button type="submit">Submit</Button>
+    </form>
+  );
+}
+
+
 export default function RefutationsPage() {
   const { language } = useContext(LanguageContext);
   const [searchQuery, setSearchQuery] = useState('');
-  const [activeTab, setActiveTab] = useState('all'); // 'all', 'philosophical', 'historical', 'quranic', 'modern'
-  
+  const [activeTab, setActiveTab] = useState('all'); 
+  const [showForm, setShowForm] = useState(false);
+
   const { data: articles, isLoading } = useArticles({
     type: 'refutation'
   });
 
-  // Filter articles based on search query and active tab
   const filteredArticles = articles?.filter(article => {
     const matchesSearch = searchQuery 
       ? (article.title_en.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -28,17 +75,16 @@ export default function RefutationsPage() {
          (article.excerpt_en && article.excerpt_en.toLowerCase().includes(searchQuery.toLowerCase())) ||
          (article.excerpt_so && article.excerpt_so.toLowerCase().includes(searchQuery.toLowerCase()))) 
       : true;
-    
+
     const matchesTab = activeTab === 'all' 
       ? true 
       : article.tags?.includes(activeTab);
-    
+
     return matchesSearch && matchesTab;
   });
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    // The filtering happens in the filteredArticles derivation above
   };
 
   const tabs = [
@@ -61,21 +107,19 @@ export default function RefutationsPage() {
               ? 'Well-researched answers to common misconceptions and criticisms about Islam.'
               : 'Jawaabo si fiican loo baadhay oo ku saabsan qalad-fahamyada iyo dhaleeceynta caadiga ah ee Islaamka.'}
           </p>
-
-          <form onSubmit={handleSearch} className="max-w-lg">
-            <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-              <Input
-                type="search"
-                placeholder={language === 'en' ? 'Search refutations...' : 'Raadi diidmooyinka...'}
-                className="pl-10 py-6"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-              />
-            </div>
-          </form>
+          </div>
+          <Button onClick={() => setShowForm(!showForm)}>
+            {language === 'en' 
+              ? (showForm ? 'Hide Form' : 'Add Refutation') 
+              : (showForm ? 'Qari Foomka' : 'Ku dar Diidmo')}
+          </Button>
         </div>
       </div>
+      {showForm && (
+        <div className="container mx-auto px-4 py-8">
+          <AddRefutationForm />
+        </div>
+      )}
 
       <div className="container mx-auto px-4 py-12">
         <Tabs value={activeTab} onValueChange={setActiveTab} className="mb-8">

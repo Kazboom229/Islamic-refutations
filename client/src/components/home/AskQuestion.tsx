@@ -24,14 +24,14 @@ export default function AskQuestion({ language }: AskQuestionProps) {
             </CardDescription>
           </CardHeader>
           <CardContent className="flex flex-col items-center">
-            <Button size="lg" className="mt-4" asChild>
-              <Link href="/ask">
-                <a className="flex items-center gap-2">
+            <Link href="/ask">
+              <Button size="lg" className="mt-4">
+                <div className="flex items-center gap-2">
                   <MessageSquareText className="h-5 w-5" />
                   {language === 'en' ? 'Ask a Question' : 'Su\'aal Weydii'}
-                </a>
-              </Link>
-            </Button>
+                </div>
+              </Button>
+            </Link>
             <div className="mt-8 text-sm text-muted-foreground max-w-2xl text-center">
               {language === 'en'
                 ? 'Our team of scholars and researchers reviews each question and provides a comprehensive answer based on authentic Islamic sources. Your question might also help others seeking similar information.'

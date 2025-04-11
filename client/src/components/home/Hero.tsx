@@ -35,12 +35,12 @@ export default function Hero({ language }: HeroProps) {
               : 'Isha dhammaystiran ee waxbarashada Islaamka, caddaymaha, iyo diidmada qalad-fahamyada. Ka hel jawaabaha su\'aalaha kaa haysta ee ku saabsan Islaamka oo hel faham qoto dheer oo ku saabsan runta.'}
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
-            <Button size="lg" asChild>
-              <Link href="/category/why-islam">
+            <Link href="/category/why-islam">
+              <Button size="lg">
                 {language === 'en' ? 'Explore Evidence' : 'Sahmin Caddaynta'}
                 <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
+              </Button>
+            </Link>
             <Button variant="outline" size="lg" asChild>
               <Link href="/refutations">
                 {language === 'en' ? 'Browse Refutations' : 'Fiiri Diidmooyinka'}

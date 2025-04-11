@@ -1,92 +1,70 @@
 import React from 'react';
 import { Link } from 'wouter';
+import { motion } from 'framer-motion';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Book, Brain, Landmark, MessageCircle, Video } from 'lucide-react';
+import { Book, Brain, Landmark, MessageCircle, Video, Globe, Users, FileText } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
-interface CategoryGridProps {
-  language: 'en' | 'so';
-}
+const categories = [
+  { icon: Brain, titleEn: 'Islamic Theology', titleSo: 'Cilmiga Diinta', path: '/category/theology' },
+  { icon: Book, titleEn: 'Sacred Texts', titleSo: 'Qoraallada Qudduuska', path: '/category/texts' },
+  { icon: Landmark, titleEn: 'Islamic History', titleSo: 'Taariikhda Islaamka', path: '/category/history' },
+  { icon: MessageCircle, titleEn: 'Discussions', titleSo: 'Doodo', path: '/category/discussions' },
+  { icon: Video, titleEn: 'Video Lectures', titleSo: 'Muhaadaro Video', path: '/category/lectures' },
+  { icon: Globe, titleEn: 'Global Islam', titleSo: 'Islaamka Aduunka', path: '/category/global' },
+  { icon: Users, titleEn: 'Community', titleSo: 'Bulsho', path: '/category/community' },
+  { icon: FileText, titleEn: 'Resources', titleSo: 'Ilaha', path: '/category/resources' }
+];
 
-export default function CategoryGrid({ language }: CategoryGridProps) {
-  const categories = [
-    {
-      title: language === 'en' ? 'Why Islam' : 'Maxay Islaamku',
-      description: language === 'en' 
-        ? 'Evidence and arguments for the truth of Islamic teachings'
-        : 'Caddaymaha iyo doodaha runta waxbarashada Islaamka',
-      icon: <Book className="h-10 w-10 text-primary" />,
-      href: '/category/why-islam',
-    },
-    {
-      title: language === 'en' ? 'Philosophical Misconceptions' : 'Qalad-fahamka Falsafadeed',
-      description: language === 'en'
-        ? 'Addressing philosophical objections to Islamic beliefs'
-        : 'Wax ka qabashada diidmada falsafadeed ee caqiidada Islaamka',
-      icon: <Brain className="h-10 w-10 text-primary" />,
-      href: '/category/philosophical-misconceptions',
-    },
-    {
-      title: language === 'en' ? 'Historical Misconceptions' : 'Qalad-fahamka Taariikheed',
-      description: language === 'en'
-        ? 'Correcting historical errors about Islam and Muslims'
-        : 'Saxitaanka khaladaadka taariikheed ee ku saabsan Islaamka iyo Muslimiinta',
-      icon: <Landmark className="h-10 w-10 text-primary" />,
-      href: '/category/historical-misconceptions',
-    },
-    {
-      title: language === 'en' ? "Qur'anic Misconceptions" : 'Qalad-fahamka Quraanka',
-      description: language === 'en'
-        ? 'Addressing misunderstandings about the Quran'
-        : 'Wax ka qabashada khalad-fahamka ku saabsan Quraanka',
-      icon: <Book className="h-10 w-10 text-primary" />,
-      href: '/category/quranic-misconceptions',
-    },
-    {
-      title: language === 'en' ? 'Modern Ideological Debates' : 'Doodaha Fikradeed ee Casriga ah',
-      description: language === 'en'
-        ? 'Islamic responses to modern ideological challenges'
-        : 'Jawaabaha Islaamiga ah ee caqabadaha fikradeed ee casriga ah',
-      icon: <MessageCircle className="h-10 w-10 text-primary" />,
-      href: '/category/modern-ideological-debates',
-    },
-    {
-      title: language === 'en' ? 'Multimedia Resources' : 'Ilaha Warbaahinta',
-      description: language === 'en'
-        ? 'Videos, presentations, and interactive resources'
-        : 'Fiidiyowyada, soo-bandhigyada, iyo ilaha wada-dhismeed',
-      icon: <Video className="h-10 w-10 text-primary" />,
-      href: '/category/multimedia',
-    },
-  ];
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+};
+
+const item = {
+  hidden: { y: 20, opacity: 0 },
+  show: { y: 0, opacity: 1 }
+};
+
+export const CategoryGrid = () => {
+  const { language } = useLanguage();
 
   return (
-    <section className="py-16 bg-background">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-12 text-center">
-          {language === 'en' ? 'Explore Categories' : 'Sahmin Qaybaha'}
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {categories.map((category) => (
-            <Link href={category.href} key={category.href}>
-              <a className="group transition-all duration-300 h-full">
-                <Card className="h-full border-2 hover:border-primary transition-colors group-hover:shadow-lg">
-                  <CardHeader className="flex flex-row items-center gap-4">
-                    <div>
-                      {category.icon}
-                    </div>
-                    <div>
-                      <CardTitle className="text-xl group-hover:text-primary transition-colors">{category.title}</CardTitle>
-                    </div>
+    <section className="py-12">
+      <motion.div 
+        variants={container}
+        initial="hidden"
+        animate="show"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto px-4"
+      >
+        {categories.map((category) => {
+          const Icon = category.icon;
+          return (
+            <motion.div key={category.path} variants={item}>
+              <Link href={category.path}>
+                <Card className="cursor-pointer hover:scale-105 transition-transform duration-200 bg-card/50 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+                  <CardHeader>
+                    <Icon className="h-8 w-8 mb-2 text-primary" />
+                    <CardTitle>{language === 'en' ? category.titleEn : category.titleSo}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <CardDescription className="text-base">{category.description}</CardDescription>
+                    <CardDescription className="line-clamp-2">
+                      {language === 'en' 
+                        ? 'Explore comprehensive resources and discussions'
+                        : 'Sahminta ilaha iyo doodaha dhammaystiran'}
+                    </CardDescription>
                   </CardContent>
                 </Card>
-              </a>
-            </Link>
-          ))}
-        </div>
-      </div>
+              </Link>
+            </motion.div>
+          );
+        })}
+      </motion.div>
     </section>
   );
-}
+};

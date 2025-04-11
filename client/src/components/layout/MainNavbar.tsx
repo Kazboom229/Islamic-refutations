@@ -19,11 +19,11 @@ interface MainNavbarProps {
 export default function MainNavbar({ language, setLanguage, darkMode, setDarkMode }: MainNavbarProps) {
   const [location] = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-  
+
   const mainLinks = [
     { 
       href: '/', 
@@ -46,7 +46,7 @@ export default function MainNavbar({ language, setLanguage, darkMode, setDarkMod
       label: language === 'en' ? 'Ask a Question' : 'Weydii Su\'aal' 
     },
   ];
-  
+
   return (
     <nav className="sticky top-0 z-50 w-full bg-background/80 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4">
@@ -59,7 +59,7 @@ export default function MainNavbar({ language, setLanguage, darkMode, setDarkMod
                 </span>
             </Link>
           </div>
-          
+
           {/* Desktop Nav Links */}
           <div className="hidden md:flex space-x-6">
             {mainLinks.map((link) => (
@@ -72,14 +72,14 @@ export default function MainNavbar({ language, setLanguage, darkMode, setDarkMod
               </Link>
             ))}
           </div>
-          
+
           {/* Actions */}
           <div className="flex items-center space-x-2">
             {/* Search Button */}
             <Button variant="ghost" size="icon" className="hidden md:flex">
               <Search className="h-5 w-5" />
             </Button>
-            
+
             {/* Language Switcher */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
@@ -96,7 +96,7 @@ export default function MainNavbar({ language, setLanguage, darkMode, setDarkMod
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
-            
+
             {/* Theme Toggle */}
             <Button variant="ghost" size="icon" onClick={() => setDarkMode(!darkMode)}>
               {darkMode ? (
@@ -105,7 +105,7 @@ export default function MainNavbar({ language, setLanguage, darkMode, setDarkMod
                 <Moon className="h-5 w-5" />
               )}
             </Button>
-            
+
             {/* Mobile Menu Button */}
             <Button variant="ghost" size="icon" className="md:hidden" onClick={toggleMenu}>
               {isMenuOpen ? (
@@ -117,7 +117,7 @@ export default function MainNavbar({ language, setLanguage, darkMode, setDarkMod
           </div>
         </div>
       </div>
-      
+
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden p-4 pt-0 bg-background border-b border-border">
@@ -136,7 +136,7 @@ export default function MainNavbar({ language, setLanguage, darkMode, setDarkMod
                 {link.label}
               </Link>
             ))}
-            
+
             {/* Search in Mobile Menu */}
             <div className="py-2.5 px-3">
               <div className="relative">

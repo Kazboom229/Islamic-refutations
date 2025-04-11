@@ -40,7 +40,7 @@ export const CategoryGrid = () => {
         variants={container}
         initial="hidden"
         animate="show"
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto px-4"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8 max-w-7xl mx-auto px-4" // Modified class for responsiveness
       >
         {categories.map((category) => {
           const Icon = category.icon;
@@ -49,11 +49,11 @@ export const CategoryGrid = () => {
               <Link href={category.path}>
                 <Card className="cursor-pointer hover:scale-105 transition-transform duration-200 bg-card/50 backdrop-blur supports-[backdrop-filter]:bg-background/60">
                   <CardHeader>
-                    <Icon className="h-8 w-8 mb-2 text-primary" />
+                    <Icon className="h-6 w-6 mb-2 text-primary" /> {/* Reduced icon size for better mobile view */}
                     <CardTitle>{language === 'en' ? category.titleEn : category.titleSo}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <CardDescription className="line-clamp-2">
+                    <CardDescription className="line-clamp-2 text-sm md:text-base"> {/* Added text-sm for mobile */}
                       {language === 'en' 
                         ? 'Explore comprehensive resources and discussions'
                         : 'Sahminta ilaha iyo doodaha dhammaystiran'}

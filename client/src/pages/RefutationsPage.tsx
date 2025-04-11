@@ -6,7 +6,7 @@ import { useArticles } from '@/hooks/useArticles';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Skeleton } from '@/components/ui/skeleton';
 import { ArrowRight, ChevronRight, ExternalLink, Eye, Search } from 'lucide-react';
@@ -94,6 +94,7 @@ export default function RefutationsPage() {
     { id: 'historical', label: language === 'en' ? 'Historical' : 'Taariikheed' },
     { id: 'quranic', label: language === 'en' ? 'Quranic' : 'Quraanka' },
     { id: 'modern', label: language === 'en' ? 'Modern' : 'Casriga ah' },
+    { id: 'fitrah', label: language === 'en' ? 'Fitrah' : 'Fitrah' } // Added Fitrah tab
   ];
 
   return (
@@ -108,7 +109,6 @@ export default function RefutationsPage() {
               ? 'Well-researched answers to common misconceptions and criticisms about Islam.'
               : 'Jawaabo si fiican loo baadhay oo ku saabsan qalad-fahamyada iyo dhaleeceynta caadiga ah ee Islaamka.'}
           </p>
-          </div>
           <Button onClick={() => setShowForm(!showForm)}>
             {language === 'en' 
               ? (showForm ? 'Hide Form' : 'Add Refutation') 
@@ -141,6 +141,7 @@ export default function RefutationsPage() {
           </div>
         ) : filteredArticles && filteredArticles.length > 0 ? (
           <div className="grid grid-cols-1 gap-6">
+            <FitrahEvidence /> {/* Added Fitrah Evidence component */}
             {filteredArticles.map((article) => (
               <Link key={article.id} href={`/article/${article.slug}`}>
                 <a className="block group">
@@ -200,3 +201,15 @@ export default function RefutationsPage() {
     </MainLayout>
   );
 }
+
+// Dummy FitrahEvidence component -  Replace with your actual component
+const FitrahEvidence = () => (
+  <Card>
+    <CardHeader>
+      <CardTitle>Evidence from Fitrah</CardTitle>
+    </CardHeader>
+    <CardContent>
+      <p>This is placeholder content for the Fitrah evidence.</p>
+    </CardContent>
+  </Card>
+);

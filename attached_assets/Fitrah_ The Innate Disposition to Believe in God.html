@@ -1,0 +1,2777 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)file:///C:/Users/habuk/Downloads/presentation_web.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Fitrah: The Innate Disposition to Believe in God</title>
+<link href="file:///C:/Users/habuk/Downloads/css/style.css" rel="stylesheet">
+<link href="./Fitrah_ The Innate Disposition to Believe in God_files/all.min.css" rel="stylesheet">
+<script src="./Fitrah_ The Innate Disposition to Believe in God_files/d3.min.js.download"></script>
+<script src="./Fitrah_ The Innate Disposition to Believe in God_files/chart.js.download"></script>
+<style>/* Global Styles */
+:root {
+    --primary-color: #3a506b;
+    --secondary-color: #1c2541;
+    --accent-color: #5bc0be;
+    --text-color: #0b132b;
+    --light-color: #f8f9fa;
+    --transition-speed: 0.3s;
+    --slide-transition: 0.5s;
+    
+    /* Animation speeds */
+    --fast-animation: 400ms;
+    --medium-animation: 800ms;
+    --slow-animation: 1200ms;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: var(--text-color);
+    overflow: hidden;
+    height: 100vh;
+}
+
+/* Presentation Container */
+.presentation-container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--light-color);
+}
+
+/* Controls */
+.controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.controls button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    margin: 0 15px;
+    transition: color var(--transition-speed);
+}
+
+.controls button:hover {
+    color: var(--accent-color);
+}
+
+#slide-counter {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    margin: 0 10px;
+}
+
+/* Slides Container */
+.slides-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* Individual Slide */
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--slide-transition), visibility var(--slide-transition);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--light-color);
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-color) rgba(0,0,0,0.1);
+}
+
+/* Custom scrollbar styling */
+.slide::-webkit-scrollbar {
+    width: 8px;
+}
+
+.slide::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.05);
+    border-radius: 10px;
+}
+
+.slide::-webkit-scrollbar-thumb {
+    background-color: var(--accent-color);
+    border-radius: 10px;
+}
+
+.slide.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Slide Content */
+.content {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    position: relative;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Title Slide */
+.title-slide {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 60vh;
+}
+
+.title-slide h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.title-slide h2 {
+    font-size: 2rem;
+    font-weight: normal;
+    color: var(--secondary-color);
+}
+
+.title-slide .subtitle {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.title-slide .subtitle p {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: var(--secondary-color);
+    opacity: 0.9;
+}
+
+.centered-text {
+    text-align: center;
+    margin: 20px auto;
+    font-size: 1.2rem;
+    font-weight: 500;
+    max-width: 90%;
+    color: var(--primary-color);
+}
+
+/* Headings */
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.8rem;
+    margin: 20px 0 10px;
+    color: var(--secondary-color);
+}
+
+/* Centered Text */
+.centered-text {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Paragraphs and Lists */
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+ul, ol {
+    margin-left: 25px;
+    margin-bottom: 20px;
+}
+
+li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* Two Column Layout */
+.two-column {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.column {
+    flex: 1;
+}
+
+/* Images */
+.image-container {
+    margin: 20px 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.image-container:hover img {
+    transform: scale(1.02);
+}
+
+/* Image blur for human faces */
+.blur-faces {
+    filter: blur(10px);
+}
+
+/* Experiment example styling */
+.experiment-example {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin: 20px 0;
+}
+
+.experiment-step {
+    padding: 15px;
+    background-color: rgba(28, 37, 65, 0.05);
+    border-radius: 10px;
+}
+
+.interview-example {
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    border-left: 3px solid var(--accent-color);
+    margin-top: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.interview-example p {
+    margin-bottom: 8px;
+}
+
+.experiment-results {
+    padding: 15px;
+    background-color: rgba(91, 192, 190, 0.1);
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .experiment-example {
+        grid-template-columns: 1fr;
+    }
+}
+
+.caption {
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.centered {
+    max-width: 80%;
+    margin: 20px auto;
+}
+
+/* Background Images */
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+    transition: opacity 0.3s ease;
+}
+
+.background-image.fade {
+    opacity: 0.1;
+}
+
+/* Timeline */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 20px;
+    height: 100%;
+    width: 4px;
+    background-color: var(--accent-color);
+    opacity: 0.5;
+}
+
+.timeline-item {
+    margin-left: 50px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -40px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+}
+
+/* Research Grid */
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.research-area {
+    padding: 20px;
+    background-color: rgba(91, 192, 190, 0.1);
+    border-radius: 10px;
+    border-left: 5px solid var(--accent-color);
+}
+
+/* Methodology Container */
+.methodology-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.method-step {
+    padding: 20px;
+    background-color: rgba(28, 37, 65, 0.05);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.method-step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Quote Container */
+.quote-container {
+    margin: 30px 0;
+}
+
+blockquote {
+    font-style: italic;
+    padding: 20px;
+    background-color: rgba(91, 192, 190, 0.1);
+    border-left: 5px solid var(--accent-color);
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    border-radius: 5px;
+}
+
+cite {
+    display: block;
+    text-align: right;
+    font-style: normal;
+    margin-top: 10px;
+    color: #666;
+}
+
+/* Chart Container */
+.chart-container {
+    width: 100%;
+    height: 300px;
+    margin: 30px auto;
+}
+
+/* Findings List */
+.findings-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.finding {
+    padding: 20px;
+    background-color: rgba(28, 37, 65, 0.05);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.finding:hover {
+    background-color: rgba(91, 192, 190, 0.1);
+    transform: translateY(-5px);
+}
+
+/* Global Map */
+.global-map {
+    width: 100%;
+    height: 300px;
+    margin: 30px auto;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+}
+
+/* Research Points */
+.research-points {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.research-point {
+    padding: 15px;
+    background-color: rgba(58, 80, 107, 0.05);
+    border-radius: 8px;
+}
+
+/* Comparison Table */
+.comparison-table {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.comparison-item {
+    padding: 20px;
+    background-color: rgba(58, 80, 107, 0.05);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    border-top: 3px solid var(--accent-color);
+}
+
+.comparison-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Innate Disposition Diagram */
+.innate-disposition-diagram {
+    width: 100%;
+    height: 300px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Logical Framework */
+.logical-framework {
+    margin: 30px 0;
+}
+
+.premise, .conclusion {
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.premise {
+    background-color: rgba(58, 80, 107, 0.05);
+    border-left: 5px solid var(--primary-color);
+}
+
+.conclusion {
+    background-color: rgba(91, 192, 190, 0.1);
+    border-left: 5px solid var(--accent-color);
+}
+
+/* Logical Symbols */
+.logical-symbols {
+    width: 100%;
+    text-align: center;
+    margin: 30px auto;
+    height: 100px;
+}
+
+/* Formal Logic */
+.formal-logic {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: rgba(28, 37, 65, 0.05);
+    border-radius: 10px;
+}
+
+.logic-statement {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.logic-derivation p {
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 10px;
+}
+
+/* Counterargument */
+.counterargument {
+    margin: 30px 0;
+}
+
+.objection, .response {
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.objection {
+    background-color: rgba(58, 80, 107, 0.05);
+    border-left: 5px solid var(--primary-color);
+}
+
+.response {
+    background-color: rgba(91, 192, 190, 0.1);
+    border-left: 5px solid var(--accent-color);
+}
+
+/* Accumulative Case */
+.accumulative-intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.proof-strands {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.strand {
+    padding: 20px;
+    background-color: rgba(58, 80, 107, 0.05);
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.strand:hover {
+    transform: translateY(-5px);
+    background-color: rgba(91, 192, 190, 0.1);
+}
+
+/* Mathematical Explanation */
+.mathematical-explanation {
+    margin: 20px 0;
+}
+
+.equation {
+    padding: 20px;
+    background-color: rgba(28, 37, 65, 0.05);
+    border-radius: 10px;
+    margin: 20px 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Accumulation Graph */
+.accumulation-graph {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto;
+}
+
+/* Bayesian Formula */
+.bayesian-formula {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: rgba(28, 37, 65, 0.05);
+    border-radius: 10px;
+}
+
+.bayesian-analysis {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: rgba(91, 192, 190, 0.1);
+    border-radius: 10px;
+}
+
+/* Explanation Comparison */
+.explanation-comparison {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.theistic-explanation, .naturalistic-explanation {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.theistic-explanation {
+    background-color: rgba(91, 192, 190, 0.1);
+    border-left: 5px solid var(--accent-color);
+}
+
+.naturalistic-explanation {
+    background-color: rgba(58, 80, 107, 0.05);
+    border-left: 5px solid var(--primary-color);
+}
+
+/* Quotes Container */
+.quotes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+/* Philosophical Model */
+.philosophical-model {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto;
+}
+
+/* Shared Properties Diagram */
+.shared-properties-diagram {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto;
+}
+
+/* Logical Argument Container */
+.logical-argument-container {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto;
+}
+
+/* Bayesian Proof Container */
+.bayesian-proof-container {
+    width: 100%;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+}
+
+.bayesian-proof-container object,
+.bayesian-proof-container img {
+    width: 100%;
+    max-height: 380px;
+    object-fit: contain;
+    display: block;
+}
+
+/* Animated elements for complex concepts */
+.logical-step {
+    transition: opacity var(--medium-animation) ease, transform var(--medium-animation) ease, background-color var(--fast-animation) ease;
+}
+
+.highlight-step {
+    background-color: rgba(91, 192, 190, 0.3) !important;
+    transition: background-color var(--fast-animation) ease;
+}
+
+.active-step {
+    border-left: 5px solid var(--accent-color);
+}
+
+.concept-box {
+    padding: 15px;
+    margin: 10px 0;
+    background-color: rgba(58, 80, 107, 0.05);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.concept-box:hover {
+    transform: translateY(-3px);
+    background-color: rgba(91, 192, 190, 0.1);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Key concepts that get pulsating animations */
+.key-concept {
+    font-weight: 600;
+    color: var(--primary-color);
+    display: inline-block;
+    padding: 0 3px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.arabic-term {
+    font-weight: 600;
+    color: var(--accent-color);
+    display: inline-block;
+    padding: 0 3px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Philosophical connector animation */
+.philosophical-connector {
+    height: 2px;
+    background-color: var(--accent-color);
+    position: absolute;
+    transform-origin: 0 0;
+    z-index: 5;
+}
+
+/* Implications List */
+.implications-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.implication {
+    padding: 15px;
+    background-color: rgba(58, 80, 107, 0.05);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.implication:hover {
+    transform: translateY(-5px);
+    background-color: rgba(91, 192, 190, 0.1);
+}
+
+/* Modern Applications */
+.modern-applications {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: rgba(91, 192, 190, 0.1);
+    border-radius: 10px;
+}
+
+/* Research Directions */
+.research-directions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.direction {
+    padding: 20px;
+    background-color: rgba(58, 80, 107, 0.05);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.direction:hover {
+    transform: translateY(-5px);
+    background-color: rgba(91, 192, 190, 0.1);
+}
+
+/* Evidence Summary */
+.evidence-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.evidence-point {
+    padding: 15px;
+    background-color: rgba(58, 80, 107, 0.05);
+    border-radius: 8px;
+}
+
+.conclusion-statement {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: rgba(91, 192, 190, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+/* Objections and Responses */
+.objections-responses {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.obj-resp {
+    padding: 15px;
+    background-color: rgba(58, 80, 107, 0.05);
+    border-radius: 8px;
+    border-left: 3px solid var(--accent-color);
+}
+
+/* Implications Container */
+.implications-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+/* Conclusion Points */
+.conclusion-points {
+    margin: 30px 0;
+}
+
+.final-statement {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: rgba(91, 192, 190, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+/* References List */
+.references-list {
+    margin: 30px 0;
+}
+
+.reference {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
+}
+
+.reference:last-child {
+    border-bottom: none;
+}
+
+/* Philosophical Observation */
+.philosophical-observation {
+    margin: 25px 0;
+    padding: 20px;
+    background-color: rgba(91, 192, 190, 0.1);
+    border-radius: 10px;
+    border-left: 5px solid var(--accent-color);
+}
+
+.philosophical-observation h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+    font-size: 1.4rem;
+}
+
+.philosophical-observation p {
+    font-style: italic;
+    line-height: 1.7;
+}
+
+/* Philosophical Lines of Evidence */
+.philosophical-lines-of-evidence {
+    margin: 20px 0;
+}
+
+.evidence-lines {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.evidence-line {
+    padding: 15px;
+    background-color: rgba(58, 80, 107, 0.05);
+    border-radius: 8px;
+    border-left: 3px solid var(--accent-color);
+    transition: all 0.3s ease;
+}
+
+.evidence-line:hover {
+    transform: translateY(-5px);
+    background-color: rgba(91, 192, 190, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.evidence-line h4 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.evidence-line p {
+    margin-bottom: 0;
+}
+
+h4 {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    margin: 15px 0 10px;
+}
+
+/* Universal Truth Container */
+.universal-truth-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin: 20px 0;
+}
+
+.truth-argument {
+    padding: 20px;
+    background-color: rgba(58, 80, 107, 0.05);
+    border-radius: 10px;
+    border-left: 4px solid var(--accent-color);
+}
+
+.formal-argument {
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.formal-argument p {
+    margin-bottom: 10px;
+}
+
+.formal-argument strong {
+    color: var(--primary-color);
+}
+
+.universal-evidence {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: rgba(91, 192, 190, 0.1);
+    border-radius: 10px;
+}
+
+/* Epistemic Table Styles */
+.epistemic-container {
+    margin: 20px 0;
+}
+
+.epistemic-table {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(28, 37, 65, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.epistemic-row {
+    display: flex;
+    border-bottom: 1px solid rgba(28, 37, 65, 0.1);
+}
+
+.epistemic-row:last-child {
+    border-bottom: none;
+}
+
+.epistemic-row.header {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+}
+
+.epistemic-cell {
+    flex: 1;
+    padding: 15px;
+    border-right: 1px solid rgba(28, 37, 65, 0.1);
+}
+
+.epistemic-cell:last-child {
+    border-right: none;
+}
+
+.epistemic-row:not(.header):hover {
+    background-color: rgba(91, 192, 190, 0.05);
+}
+
+.key-conclusion {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: rgba(91, 192, 190, 0.15);
+    border-radius: 10px;
+    border-left: 5px solid var(--accent-color);
+}
+
+/* Responsive Design */
+@media (max-width: 1366px) {
+    .content {
+        padding: 20px;
+        width: 95%;
+        overflow-y: auto;
+        max-height: 90vh;
+    }
+    
+    h2 {
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+    }
+    
+    h3 {
+        font-size: 1.6rem;
+    }
+    
+    .two-column {
+        gap: 15px;
+    }
+    
+    .shared-properties-diagram,
+    .innate-disposition-diagram,
+    .logical-argument-container,
+    .philosophical-model {
+        height: auto;
+        min-height: 250px;
+    }
+    
+    /* Make SVG content more visible on smaller screens */
+    svg {
+        max-width: 95%;
+        height: auto;
+    }
+}
+
+@media (max-width: 1024px) {
+    .two-column, .methodology-container, .explanation-comparison {
+        grid-template-columns: 1fr;
+    }
+
+    .controls {
+        bottom: 10px;
+    }
+    
+    /* Adjust container heights for better viewing on laptops */
+    .shared-properties-diagram {
+        height: 350px;
+    }
+    
+    .bayesian-proof-container {
+        height: auto;
+    }
+    
+    /* Ensure controls are always visible */
+    #slide-counter {
+        padding: 5px 10px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    p, li {
+        font-size: 1rem;
+    }
+
+    .content {
+        padding: 15px;
+        width: 100%;
+    }
+
+    .research-points, .comparison-table {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .title-slide h1 {
+        font-size: 3rem;
+    }
+
+    .title-slide h2 {
+        font-size: 1.5rem;
+    }
+
+    .controls button {
+        margin: 0 10px;
+    }
+}
+</style></head>
+<body>
+<div class="presentation-container">
+<div class="controls">
+<button id="prev-btn" title="Previous Slide"><i class="fas fa-arrow-left"></i></button>
+<span id="slide-counter">1 / 37</span>
+<button id="next-btn" title="Next Slide"><i class="fas fa-arrow-right"></i></button>
+<button id="fullscreen-btn" title="Fullscreen"><i class="fas fa-expand"></i></button>
+</div>
+<div class="slides-container">
+<!-- Slide 1: Title -->
+<section class="slide active" id="slide-1">
+<div class="content title-slide">
+<h1>Fitrah (الفطرة)</h1>
+<h2>The Innate Human Disposition to Believe in Allah</h2>
+<div class="subtitle">
+<p>A fundamental Islamic concept found in all societies throughout human history</p>
+</div>
+<div class="background-image" style="background-image: url(&#39;https://images.unsplash.com/photo-1590845947676-fa9ebb6203ed&#39;)"></div>
+</div>
+</section>
+<!-- Slide 2: Introduction -->
+<section class="slide" id="slide-2">
+<div class="content">
+<h2>What is Fitrah?</h2>
+<div class="two-column">
+<div class="column">
+<p>Fitrah (فطرة) is a fundamental Islamic concept referring to the pure, natural state in which Allah creates every human being with an innate disposition to believe in and worship Him.</p>
+<p>In Islamic theology, fitrah signifies:</p>
+<ul>
+<li>The primordial covenant made between Allah and all human souls</li>
+<li>The natural inclination toward tawhid (monotheism) present in every person</li>
+<li>A universal truth that transcends cultural, geographical, and historical differences</li>
+<li>The pure state that can be obscured by negative environmental influences</li>
+</ul>
+<p>"So direct your face toward the religion, inclining to truth. [Adhere to] the fitrah of Allah upon which He has created [all] people." (Quran 30:30)</p>
+</div>
+<div class="column">
+<div class="fitrah-diagram-container">
+<!-- Direct inline SVG for guaranteed display -->
+<svg height="400" viewBox="0 0 400 400" width="400">
+<!-- Background circle representing the soul -->
+<circle cx="200" cy="200" fill="#f0f9ff" r="180" stroke="#3a506b" stroke-width="2"></circle>
+<!-- Center point - the pure fitrah -->
+<circle cx="200" cy="200" fill="#5bc0be" r="50" stroke="#fff" stroke-width="3"></circle>
+<text fill="#fff" font-size="18" font-weight="bold" text-anchor="middle" x="200" y="205">الفطرة</text>
+<text fill="#fff" font-size="14" text-anchor="middle" x="200" y="227">Fitrah</text>
+<!-- Radiating elements representing aspects of fitrah -->
+<!-- Theological dimension -->
+<path d="M200,150 L200,50" stroke="#3a506b" stroke-dasharray="5,3" stroke-width="2"></path>
+<circle cx="200" cy="50" fill="#718ecc" r="30" stroke="#fff" stroke-width="1"></circle>
+<text fill="#fff" font-size="12" text-anchor="middle" x="200" y="55">Tawhid</text>
+<!-- Epistemological dimension -->
+<path d="M250,175 L330,100" stroke="#3a506b" stroke-dasharray="5,3" stroke-width="2"></path>
+<circle cx="330" cy="100" fill="#718ecc" r="30" stroke="#fff" stroke-width="1"></circle>
+<text fill="#fff" font-size="12" text-anchor="middle" x="330" y="105">Knowledge</text>
+<!-- Moral dimension -->
+<path d="M250,225 L330,300" stroke="#3a506b" stroke-dasharray="5,3" stroke-width="2"></path>
+<circle cx="330" cy="300" fill="#718ecc" r="30" stroke="#fff" stroke-width="1"></circle>
+<text fill="#fff" font-size="12" text-anchor="middle" x="330" y="305">Ethics</text>
+<!-- Natural disposition -->
+<path d="M200,250 L200,350" stroke="#3a506b" stroke-dasharray="5,3" stroke-width="2"></path>
+<circle cx="200" cy="350" fill="#718ecc" r="30" stroke="#fff" stroke-width="1"></circle>
+<text fill="#fff" font-size="12" text-anchor="middle" x="200" y="355">Nature</text>
+<!-- Communal dimension -->
+<path d="M150,225 L70,300" stroke="#3a506b" stroke-dasharray="5,3" stroke-width="2"></path>
+<circle cx="70" cy="300" fill="#718ecc" r="30" stroke="#fff" stroke-width="1"></circle>
+<text fill="#fff" font-size="12" text-anchor="middle" x="70" y="305">Community</text>
+<!-- Spiritual dimension -->
+<path d="M150,175 L70,100" stroke="#3a506b" stroke-dasharray="5,3" stroke-width="2"></path>
+<circle cx="70" cy="100" fill="#718ecc" r="30" stroke="#fff" stroke-width="1"></circle>
+<text fill="#fff" font-size="12" text-anchor="middle" x="70" y="105">Spirituality</text>
+<!-- Title at the bottom -->
+<text fill="#333" font-size="16" font-weight="bold" text-anchor="middle" x="200" y="390">The Dimensions of Fitrah</text>
+</svg>
+<p class="caption">Fitrah (الفطرة) encompasses multiple dimensions radiating from the core of human nature</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Slide 3: Historical Context -->
+<section class="slide" id="slide-3">
+<div class="content">
+<h2>Fitrah in Islamic Tradition</h2>
+<div class="timeline">
+<div class="timeline-item">
+<h3>Quranic Foundation</h3>
+<p>"So direct your face toward the religion, inclining to truth. [Adhere to] the fitrah of Allah upon which He has created [all] people." (Quran 30:30)</p>
+</div>
+<div class="timeline-item">
+<h3>Prophetic Teachings</h3>
+<p>"Every child is born in a state of fitrah, then his parents make him into a Jew, Christian, or Magian." - Sahih al-Bukhari</p>
+</div>
+<div class="timeline-item">
+<h3>Islamic Scholarship</h3>
+<p>Scholars like Ibn Taymiyyah and Ibn Qayyim emphasized fitrah as the primordial covenant (mithaq) between humans and Allah</p>
+</div>
+<div class="timeline-item">
+<h3>Contemporary Understanding</h3>
+<p>Modern Islamic scholars connect fitrah with scientific research showing children's natural inclination toward belief in a Creator</p>
+</div>
+</div>
+<div class="quote-container">
+<blockquote>
+                            "Fitrah represents the original pattern according to which Allah created human beings — a spiritual blueprint that inclines toward recognition of divine unity (tawhid)."
+                            <cite>— Contemporary Islamic theological perspective</cite>
+</blockquote>
+</div>
+<div class="background-image fade" style="background-image: url(&#39;https://images.unsplash.com/photo-1519817650390-64a93db51149&#39;)"></div>
+</div>
+</section>
+<!-- Slide 4: Research Overview -->
+<section class="slide" id="slide-4">
+<div class="content">
+<h2>Scientific Research Validating Fitrah</h2>
+<div class="research-grid">
+<div class="research-area">
+<h3>Developmental Psychology</h3>
+<p>Studies confirming children's natural intuition about a creator, aligning with the Islamic understanding that every soul bears witness to Allah's lordship</p>
+</div>
+<div class="research-area">
+<h3>Cognitive Science of Religion</h3>
+<p>Research showing the human mind is designed to recognize divine agency and purpose, consistent with Quranic teachings about how humans naturally recognize Allah's signs</p>
+</div>
+<div class="research-area">
+<h3>Cross-Cultural Studies</h3>
+<p>Evidence that people across all cultures and times naturally develop belief in a creator, supporting the Islamic view that fitrah is universal to all humanity</p>
+</div>
+<div class="research-area">
+<h3>Psychology of Atheism</h3>
+<p>Research suggesting that disbelief requires active cognitive effort to overcome natural theistic intuitions, confirming the Islamic teaching that deviation from fitrah is unnatural</p>
+</div>
+</div>
+<div class="quote-container">
+<blockquote>
+                            "Scientific research across multiple disciplines provides evidence for the very innate disposition to believe in God that Islamic theology has recognized for 1400 years as fitrah."
+                        </blockquote>
+</div>
+<div class="image-container centered">
+<img alt="Scientific research" src="./Fitrah_ The Innate Disposition to Believe in God_files/photo-1532187863486-abf9dbad1b69">
+<p class="caption">Modern research methods helping confirm ancient Islamic wisdom</p>
+</div>
+</div>
+</section>
+<!-- Slide 5: Petrovich Experiments Introduction -->
+<section class="slide" id="slide-5">
+<div class="content">
+<h2>The Petrovich Experiments</h2>
+<div class="two-column">
+<div class="column">
+<p>Dr. Olivera Petrovich, developmental psychologist at Oxford University, conducted groundbreaking research on children's concepts of natural and supernatural causality.</p>
+<p>Key findings:</p>
+<ul>
+<li>Children from non-religious backgrounds still attribute creation to God</li>
+<li>Young children appear to have a "natural theism"</li>
+<li>These tendencies appear across diverse cultural contexts</li>
+</ul>
+</div>
+<div class="column">
+<div class="image-container">
+<img alt="Child in natural setting" class="blur-faces" src="./Fitrah_ The Innate Disposition to Believe in God_files/photo-1542317785-ae7b6fa20f55">
+<p class="caption">Children naturally perceive design and purpose in the world</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Slide 6: Petrovich Methodology - Detailed -->
+<section class="slide" id="slide-6">
+<div class="content">
+<h2>Petrovich's Experimental Design</h2>
+<div class="methodology-container">
+<div class="method-step">
+<h3>1. Participants</h3>
+<p>- British group: 38 children (ages 4-7) from varied religious backgrounds</p>
+<p>- Japanese group: 42 children (ages 4-7) with minimal exposure to monotheistic concepts</p>
+</div>
+<div class="method-step">
+<h3>2. Control Variables</h3>
+<p>- Matching for age, socioeconomic status, and cognitive development</p>
+<p>- Careful translation of questions to preserve conceptual equivalence</p>
+</div>
+<div class="method-step">
+<h3>3. Materials</h3>
+<p>- Set of 14 high-quality photographs of natural objects (mountains, lakes, stars)</p>
+<p>- Set of 8 photographs of human-made objects (buildings, toys, clothing)</p>
+</div>
+<div class="method-step">
+<h3>4. Procedure</h3>
+<p>- Individual interviews in familiar settings (schools)</p>
+<p>- Questions asked: "How did this object get here?" and "How did it get made?"</p>
+</div>
+</div>
+</div>
+</section>
+<!-- New Slide: Petrovich Experiment Details -->
+<section class="slide" id="slide-petrovich-detail">
+<div class="content">
+<h2>Petrovich's Experimental Process</h2>
+<div class="experiment-example">
+<div class="experiment-step">
+<h3>Example Interview Protocol:</h3>
+<div class="interview-example">
+<p><strong>Interviewer:</strong> "Look at this picture of mountains. How do you think the mountains got here?"</p>
+<p><strong>Child (Japanese, age 5):</strong> "God made them."</p>
+<p><strong>Interviewer:</strong> "How did God make them?"</p>
+<p><strong>Child:</strong> "God has big power. God can make everything."</p>
+<p><strong>Interviewer:</strong> "Now look at this bicycle. How did the bicycle get here?"</p>
+<p><strong>Child:</strong> "People made it in a factory with tools and machines."</p>
+</div>
+</div>
+<div class="experiment-results">
+<h3>Key Results:</h3>
+<ul>
+<li>91% of Japanese children attributed the origin of natural objects to God/divine action</li>
+<li>Nearly all children correctly attributed human-made objects to human designers</li>
+<li>Children consistently distinguished between human and divine creativity</li>
+<li>No significant differences between Japanese and British children in attributing natural objects to God</li>
+</ul>
+<div class="quote-container">
+<blockquote>
+                                    "The most striking finding was that Japanese children, despite being brought up in a culture that is essentially non-theistic, still showed a propensity to see a creator God behind the natural world."
+                                    <cite>— Dr. Olivera Petrovich</cite>
+</blockquote>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Slide 7: Petrovich Results -->
+<section class="slide" id="slide-7">
+<div class="content">
+<h2>Petrovich's Key Findings</h2>
+<div class="chart-container">
+<canvas id="petrovichChart" width="1717" height="450" style="display: block; box-sizing: border-box; height: 300px; width: 1144px;"></canvas>
+</div>
+<div class="findings-list">
+<div class="finding">
+<h3>Spontaneous God References</h3>
+<p>Children spontaneously referenced God despite minimal religious exposure</p>
+</div>
+<div class="finding">
+<h3>Distinction of Categories</h3>
+<p>Children distinguished between human-made and natural objects</p>
+</div>
+<div class="finding">
+<h3>Cross-Cultural Consistency</h3>
+<p>Similar patterns observed across different cultural contexts</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Slide 8: Barrett's Studies -->
+<section class="slide" id="slide-8">
+<div class="content">
+<h2>Justin Barrett's Research</h2>
+<div class="two-column">
+<div class="column">
+<p>Dr. Justin Barrett, cognitive scientist of religion, conducted studies on children's natural conceptualization of God.</p>
+<p>Key findings:</p>
+<ul>
+<li>Children naturally attribute superhuman qualities to God</li>
+<li>"Preparedness hypothesis" - children's minds are prepared to accept and reason about supernatural concepts</li>
+<li>Evidence for a "Hyperactive Agency Detection Device" (HADD) in human cognition</li>
+</ul>
+</div>
+<div class="column">
+<div class="image-container">
+<img alt="Scientific research illustration" src="./Fitrah_ The Innate Disposition to Believe in God_files/photo-1518152006812-edab29b069ac">
+<p class="caption">Cognitive architecture predisposed to detect agency</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- New Slide: Barrett's Experimental Design -->
+<section class="slide" id="slide-barrett-detail">
+<div class="content">
+<h2>Barrett's "Princess Alice" Experiment</h2>
+<div class="experiment-example">
+<div class="experiment-step">
+<h3>Experimental Design:</h3>
+<p>Barrett's team studied 57 children (ages 3-8) to test how they conceptualize invisible agents with special powers.</p>
+<p><strong>Setup:</strong> Children were introduced to an invisible princess named "Princess Alice" who had special powers:</p>
+<ul>
+<li>Could make things happen without touching them</li>
+<li>Could see everything in the room</li>
+<li>Could pass through solid objects</li>
+<li>Knew what was in closed containers</li>
+</ul>
+<p>Children were then given tasks to test if they truly conceptualized these abilities.</p>
+</div>
+<div class="experiment-results">
+<h3>Test Example:</h3>
+<div class="interview-example">
+<p><strong>Researcher:</strong> "Princess Alice is sitting in that chair. She can see everything in this room."</p>
+<p><strong>Researcher:</strong> [Places toy behind a barrier] "Can Princess Alice see the toy?"</p>
+<p><strong>Child (age 4):</strong> "Yes, because she has special eyes that can see everything."</p>
+<p><strong>Researcher:</strong> "If I put this ball in this box and close it, does Princess Alice know what's in the box?"</p>
+<p><strong>Child:</strong> "Yes, she knows everything. She has magic powers."</p>
+</div>
+<h3>Results:</h3>
+<p>Even with minimal description, children:</p>
+<ul>
+<li>Readily accepted and reasoned about Princess Alice's superhuman qualities</li>
+<li>Did not confuse her abilities with human limitations</li>
+<li>Conceptualized her consistently with how they described God</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Slide 9: Kelemen's Studies -->
+<section class="slide" id="slide-9">
+<div class="content">
+<h2>Research on Children's Natural Intuitions</h2>
+<div class="research-summary">
+<p>Dr. Deborah Kelemen, cognitive developmental psychologist, researched children's tendency toward teleological thinking.</p>
+<div class="research-findings">
+<div class="finding">
+<h3>Promiscuous Teleology</h3>
+<p>Children naturally see purpose in natural objects (e.g., "mountains are for climbing")</p>
+</div>
+<div class="finding">
+<h3>Design Stance</h3>
+<p>Children intuitively perceive natural world as designed</p>
+</div>
+<div class="finding">
+<h3>Persistence into Adulthood</h3>
+<p>Under cognitive load, adults revert to teleological explanations</p>
+</div>
+</div>
+<div class="image-container centered">
+<img alt="Child in natural setting" class="blur-faces" src="./Fitrah_ The Innate Disposition to Believe in God_files/photo-1502802619459-7448b7c07b52">
+<p class="caption">Children naturally see purpose in natural phenomena</p>
+</div>
+</div>
+</div>
+</section>
+<!-- New Slide: Kelemen's Experimental Design -->
+<section class="slide" id="slide-kelemen-detail">
+<div class="content">
+<h2>Kelemen's Teleological Experiments</h2>
+<div class="experiment-example">
+<div class="experiment-step">
+<h3>Experimental Design:</h3>
+<p>Kelemen studied children ages 4-10 to test their tendency toward teleological thinking (purpose-based reasoning).</p>
+<p><strong>Setup:</strong> Children were shown images of natural objects and asked about their purpose.</p>
+<p><strong>Materials:</strong></p>
+<ul>
+<li>Pictures of natural entities (clouds, mountains, rocks)</li>
+<li>Pictures of artifacts (chairs, pencils)</li>
+<li>Picture cards for response options</li>
+</ul>
+<p><strong>Controls:</strong> Different age groups, counterbalanced presentations</p>
+</div>
+<div class="experiment-results">
+<h3>Example Question Format:</h3>
+<div class="interview-example">
+<p><strong>Researcher:</strong> [Shows picture of pointy rocks] "Why do you think these rocks are pointy?"</p>
+<p><strong>Child (age 5):</strong> "So animals can scratch on them when they get itchy."</p>
+<p><strong>Researcher:</strong> "Why do you think clouds are puffy and white?"</p>
+<p><strong>Child:</strong> "So that we can see them and know when it's going to rain."</p>
+<p><strong>Researcher:</strong> "Why do you think rivers exist?"</p>
+<p><strong>Child:</strong> "For animals to drink from and for fish to live in."</p>
+</div>
+<h3>Key Results:</h3>
+<ul>
+<li>Children ages 4-8 consistently preferred teleological explanations for natural objects</li>
+<li>Tendency to see design and purpose in nature emerged spontaneously</li>
+<li>Children frequently referenced "someone" making natural things "for" a purpose</li>
+<li>Even children from non-religious backgrounds showed teleological reasoning</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Slide 10: Cross-Cultural Evidence -->
+<section class="slide" id="slide-10">
+<div class="content">
+<h2>Universal Evidence for Fitrah</h2>
+<div class="global-map" id="world-map">
+<!-- D3.js will render a world map with research points here -->
+<svg width="1145" height="300"><path d="M100,100 L200,100 L200,180 L100,180 Z" class="continent" fill="#ccc" stroke="#fff" stroke-width="0.5"><title>North America</title></path><path d="M150,200 L200,200 L200,280 L150,280 Z" class="continent" fill="#ccc" stroke="#fff" stroke-width="0.5"><title>South America</title></path><path d="M300,100 L350,100 L350,150 L300,150 Z" class="continent" fill="#ccc" stroke="#fff" stroke-width="0.5"><title>Europe</title></path><path d="M300,180 L360,180 L360,260 L300,260 Z" class="continent" fill="#ccc" stroke="#fff" stroke-width="0.5"><title>Africa</title></path><path d="M380,100 L480,100 L480,180 L380,180 Z" class="continent" fill="#ccc" stroke="#fff" stroke-width="0.5"><title>Asia</title></path><path d="M450,220 L500,220 L500,260 L450,260 Z" class="continent" fill="#ccc" stroke="#fff" stroke-width="0.5"><title>Australia</title></path><text x="572.5" y="30" text-anchor="middle" font-size="14px" fill="#333">Fitrah Research Locations Worldwide</text><circle cx="568.7056338896462" cy="-58.09098474796767" r="6" fill="#ff6b6b" stroke="#333" stroke-width="1"><title>Oxford, UK: Petrovich study</title></circle><circle cx="346.6633260491581" cy="-21.1498487445798" r="6" fill="#48dbfb" stroke="#333" stroke-width="1"><title>Harvard, USA: Kelemen study</title></circle><circle cx="1028.8962832890888" cy="5.775067877069546" r="6" fill="#ff6b6b" stroke="#333" stroke-width="1"><title>Tokyo, Japan: Petrovich study</title></circle><circle cx="1042.1819498959596" cy="302.80627144535725" r="6" fill="#1dd1a1" stroke="#333" stroke-width="1"><title>Melbourne, Australia: Barrett study</title></circle><circle cx="414.44452236780705" cy="245.02873233819017" r="6" fill="#feca57" stroke="#333" stroke-width="1"><title>São Paulo, Brazil: Cross-cultural study</title></circle><circle cx="700.6309679311372" cy="155.201627068595" r="6" fill="#feca57" stroke="#333" stroke-width="1"><title>Nairobi, Kenya: Indigenous beliefs study</title></circle><text class="location" x="576.7056338896462" y="-54.09098474796767" font-size="9px" fill="#333">Oxford, UK</text><text class="location" x="354.6633260491581" y="-17.1498487445798" font-size="9px" fill="#333">Harvard, USA</text><text class="location" x="1036.8962832890888" y="9.775067877069546" font-size="9px" fill="#333">Tokyo, Japan</text><text class="location" x="1050.1819498959596" y="306.80627144535725" font-size="9px" fill="#333">Melbourne, Australia</text><text class="location" x="422.44452236780705" y="249.02873233819017" font-size="9px" fill="#333">São Paulo, Brazil</text><text class="location" x="708.6309679311372" y="159.201627068595" font-size="9px" fill="#333">Nairobi, Kenya</text></svg></div>
+<div class="research-points">
+<div class="research-point">
+<h3>Historical Monotheism</h3>
+<p>Anthropological evidence shows that the earliest religious beliefs across all continents were monotheistic, not polytheistic, confirming the Islamic teaching that all humans originally recognized Allah's oneness</p>
+</div>
+<div class="research-point">
+<h3>No Atheistic Societies</h3>
+<p>No documented truly atheistic pre-modern societies exist in anthropological records, supporting the Quranic assertion that belief in Allah is the natural human condition</p>
+</div>
+<div class="research-point">
+<h3>Universality of Belief</h3>
+<p>Even the most isolated indigenous cultures demonstrate belief in creator deities with attributes similar to Islamic conceptions of Allah, showing fitrah's universality</p>
+</div>
+</div>
+<div class="quote-container">
+<blockquote>
+                            "And [mention] when your Lord took from the children of Adam - from their loins - their descendants and made them testify of themselves, [saying to them], 'Am I not your Lord?' They said, 'Yes, we have testified.' [This] - lest you should say on the day of Resurrection, 'Indeed, we were of this unaware.'"
+                            <cite>— Quran 7:172, describing the primordial covenant with all humanity</cite>
+</blockquote>
+</div>
+</div>
+</section>
+<!-- New Slide: Traditional Cultural Perspectives -->
+<section class="slide" id="slide-cultural-traditions">
+<div class="content">
+<h2>Cultural Expressions of Fitrah</h2>
+<div class="comparison-table">
+<div class="comparison-item">
+<h3>African Traditions</h3>
+<p>Most African traditional religions recognize a supreme creator God (e.g., Olodumare, Nyame, Mulungu) with attributes similar to Islamic conception of Allah</p>
+<p>The Islamic concept of fitrah explains why African religious traditions, despite their diverse expressions, maintain core monotheistic elements</p>
+</div>
+<div class="comparison-item">
+<h3>Native American Beliefs</h3>
+<p>Concepts like the "Great Spirit" (Wakan Tanka, Gitche Manitou) reflect monotheistic foundations beneath later cultural developments</p>
+<p>Islamic scholars note these concepts as expressions of fitrah that became obscured over generations, as mentioned in hadith</p>
+</div>
+<div class="comparison-item">
+<h3>Aboriginal Australian Spirituality</h3>
+<p>Creation stories featuring divine beings with eternal attributes and moral awareness</p>
+<p>The "Dreaming" contains elements consistent with Islamic understanding of natural human recognition of the divine</p>
+</div>
+<div class="comparison-item">
+<h3>Pre-Islamic Arabian Monotheism</h3>
+<p>Even before Islam, Hanifs (natural monotheists) like Ibrahim (Abraham) rejected polytheism in favor of pure monotheism</p>
+<p>The Quran refers to these individuals as following their fitrah despite cultural corruption</p>
+</div>
+</div>
+<div class="background-image fade" style="background-image: url(&#39;https://images.unsplash.com/photo-1543702394-8afa98c561d7&#39;)"></div>
+</div>
+</section>
+<!-- New Slide: Historical Evidence -->
+<section class="slide" id="slide-historical">
+<div class="content">
+<h2>Historical Evidence of Universal Belief in God</h2>
+<div class="two-column">
+<div class="column">
+<h3>Historical Pattern of Theism</h3>
+<ul>
+<li>All known ancient civilizations began with belief in creator deity/deities</li>
+<li>Anthropological records show no pre-modern atheistic societies</li>
+<li>Religious belief precedes secular worldviews historically</li>
+<li>Atheism is a modern development that required cognitive override of natural tendencies</li>
+</ul>
+<blockquote>
+                                "In the early history of every people, of every race and every region of the world, it's belief in God or the gods that dominates the scene."
+                                <cite>— Wilhelm Schmidt, anthropologist</cite>
+</blockquote>
+</div>
+<div class="column">
+<div class="timeline">
+<div class="timeline-item">
+<h3>Ancient Mesopotamia (3500 BCE)</h3>
+<p>Earliest civilization had robust religious beliefs from its beginning</p>
+</div>
+<div class="timeline-item">
+<h3>Ancient Egypt (3100 BCE)</h3>
+<p>Creator deity concepts present from earliest records</p>
+</div>
+<div class="timeline-item">
+<h3>Indus Valley (2500 BCE)</h3>
+<p>Religious symbols found in earliest archaeological findings</p>
+</div>
+<div class="timeline-item">
+<h3>Indigenous Cultures</h3>
+<p>Creator beliefs found universally in isolated tribal societies</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Slide 11: Comparative Innate Dispositions -->
+<section class="slide" id="slide-11">
+<div class="content">
+<h2>Comparing Innate Dispositions</h2>
+<p>Our belief in God exists alongside other innate dispositions we naturally accept</p>
+<div class="comparison-table">
+<div class="comparison-item">
+<h3>External World Realism</h3>
+<p>Innate disposition to believe in the existence of an external world</p>
+</div>
+<div class="comparison-item">
+<h3>Causal Reasoning</h3>
+<p>Natural tendency to seek causes for events</p>
+</div>
+<div class="comparison-item">
+<h3>Mind-Body Dualism</h3>
+<p>Intuitive perception of mind as distinct from physical body</p>
+</div>
+<div class="comparison-item">
+<h3>Moral Intuitions</h3>
+<p>Natural sense of right and wrong across cultures</p>
+</div>
+</div>
+<div class="image-container">
+<img alt="Philosophical concept" src="./Fitrah_ The Innate Disposition to Believe in God_files/photo-1595450547833-95af46d7c43a">
+<p class="caption">Our cognitive architecture includes multiple innate tendencies</p>
+</div>
+</div>
+</section>
+<!-- Slide 12: Innate Disposition Comparison Detailed -->
+<section class="slide" id="slide-12">
+<div class="content">
+<h2>The External World Comparison</h2>
+<div class="two-column">
+<div class="column">
+<h3>External World Belief</h3>
+<ul>
+<li>We naturally believe an external world exists</li>
+<li>Cannot be definitively proven (solipsism problem)</li>
+<li>Accepted as rational despite philosophical challenges</li>
+<li>Emerges naturally in cognitive development</li>
+</ul>
+</div>
+<div class="column">
+<h3>Belief in God</h3>
+<ul>
+<li>Natural tendency to believe in a creator</li>
+<li>Emerges without explicit instruction</li>
+<li>Persists across cultures and time</li>
+<li>Rational to accept as aligned with our cognitive architecture</li>
+</ul>
+</div>
+</div>
+<div class="innate-disposition-diagram"><p>Error loading diagram. Please refresh the page.</p></div>
+</div>
+</section>
+<!-- Slide 13: Logical Arguments - Introduction -->
+<section class="slide" id="slide-13">
+<div class="content">
+<h2>Logical Framework for Fitrah Argument</h2>
+<div class="logical-framework">
+<div class="premise">
+<h3>P1: Innate Universal Tendencies</h3>
+<p>Humans have innate cognitive tendencies that emerge universally</p>
+</div>
+<div class="premise">
+<h3>P2: Reliability of Innate Tendencies</h3>
+<p>Innate cognitive tendencies generally track truth about reality</p>
+</div>
+<div class="premise">
+<h3>P3: Universality of Theistic Intuition</h3>
+<p>Belief in God/creator emerges as a natural cognitive tendency</p>
+</div>
+<div class="conclusion">
+<h3>C: Rational Theism</h3>
+<p>It is rational to accept the existence of God based on innate disposition</p>
+</div>
+</div>
+<div class="logical-symbols"><svg width="600" height="100" viewBox="0 0 600 100"><rect x="50" y="30" width="80" height="40" rx="5" fill="#3a506b" opacity="0.7"></rect><text x="90" y="55" text-anchor="middle" fill="#fff" font-size="16">∀x</text><text x="90" y="80" text-anchor="middle" fill="#333" font-size="10">Universal Quantifier</text><rect x="150" y="30" width="80" height="40" rx="5" fill="#3a506b" opacity="0.7"></rect><text x="190" y="55" text-anchor="middle" fill="#fff" font-size="16">∃x</text><text x="190" y="80" text-anchor="middle" fill="#333" font-size="10">Existential Quantifier</text><rect x="250" y="30" width="80" height="40" rx="5" fill="#5bc0be" opacity="0.7"></rect><text x="290" y="55" text-anchor="middle" fill="#fff" font-size="16">→</text><text x="290" y="80" text-anchor="middle" fill="#333" font-size="10">Implication</text><rect x="350" y="30" width="80" height="40" rx="5" fill="#5bc0be" opacity="0.7"></rect><text x="390" y="55" text-anchor="middle" fill="#fff" font-size="16">∧</text><text x="390" y="80" text-anchor="middle" fill="#333" font-size="10">Conjunction</text><rect x="450" y="30" width="80" height="40" rx="5" fill="#5bc0be" opacity="0.7"></rect><text x="490" y="55" text-anchor="middle" fill="#fff" font-size="16">∨</text><text x="490" y="80" text-anchor="middle" fill="#333" font-size="10">Disjunction</text></svg></div>
+</div>
+</section>
+<!-- Slide 14: Logical Formalization -->
+<section class="slide" id="slide-14">
+<div class="content">
+<h2>Formal Logical Representation</h2>
+<div class="formal-logic">
+<div class="logic-statement">
+<p>Let IT<sub>x</sub> = "x is an innate tendency of human cognition"</p>
+<p>Let R(x) = "x is generally reliable for tracking truth"</p>
+<p>Let TB = "Theistic belief"</p>
+<p>Let RB = "Rational to believe"</p>
+</div>
+<div class="logic-derivation">
+<p>1. ∀x[IT<sub>x</sub> → R(x)] (Premise)</p>
+<p>2. IT<sub>TB</sub> (Premise - supported by empirical evidence)</p>
+<p>3. R(TB) (From 1, 2 by Universal Instantiation and Modus Ponens)</p>
+<p>4. ∀x[R(x) → RB(x)] (Premise - reliability principle)</p>
+<p>5. RB(TB) (From 3, 4 by Universal Instantiation and Modus Ponens)</p>
+</div>
+</div>
+<div class="image-container">
+<img alt="Philosophical concept illustration" src="./Fitrah_ The Innate Disposition to Believe in God_files/photo-1506729623306-b5a934d88b53">
+<p class="caption">Logical structure of the fitrah argument</p>
+</div>
+</div>
+</section>
+<!-- Slide 15: Challenge: Unreliable Tendencies -->
+<section class="slide" id="slide-15">
+<div class="content">
+<h2>Addressing Counterarguments</h2>
+<h3>Objection: Not All Intuitions Are Reliable</h3>
+<div class="counterargument">
+<div class="objection">
+<p>Humans have various cognitive biases and unreliable intuitions</p>
+<p>Examples: Confirmation bias, pattern recognition errors, etc.</p>
+<p>Therefore, innate tendency to believe in God may be unreliable</p>
+</div>
+<div class="response">
+<h4>Response:</h4>
+<p>1. Core cognitive architecture is generally reliable for evolutionary fitness</p>
+<p>2. Universal innate dispositions (vs. specific biases) more likely to track truth</p>
+<p>3. Burden of proof on skeptic to show why this specific disposition is unreliable</p>
+<p>4. The intuition coheres with other reliable cognitive faculties</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Slide 16: Challenge: Cultural Conditioning -->
+<section class="slide" id="slide-16">
+<div class="content">
+<h2>Addressing Cultural Conditioning Objection</h2>
+<div class="two-column">
+<div class="column">
+<div class="objection">
+<h3>Objection:</h3>
+<p>Belief in God is merely cultural conditioning, not innate disposition</p>
+<ul>
+<li>Different religious conceptions across cultures</li>
+<li>Atheism in some modern societies</li>
+<li>Religious belief correlates with childhood exposure</li>
+</ul>
+</div>
+</div>
+<div class="column">
+<div class="response">
+<h3>Response:</h3>
+<p>Research shows:</p>
+<ul>
+<li>Children from non-religious homes still show theistic intuitions</li>
+<li>Specific religious concepts may vary, but agency detection is universal</li>
+<li>Atheism requires cognitive override of natural intuitions</li>
+<li>Cultural variation exists in expression, not fundamental disposition</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="image-container">
+<img alt="Child in natural setting" class="blur-faces" src="./Fitrah_ The Innate Disposition to Believe in God_files/photo-1542810634-71277d95dcbb">
+<p class="caption">Innate tendencies manifest across diverse cultural contexts</p>
+</div>
+</div>
+</section>
+<!-- Slide 17: Accumulative Case Introduction -->
+<section class="slide" id="slide-17">
+<div class="content">
+<h2>The Accumulative Case for Fitrah</h2>
+<div class="accumulative-intro">
+<p>The Islamic concept of fitrah is supported by multiple independent lines of evidence</p>
+<p>Each strand of evidence strengthens the overall case for the innate disposition to believe in Allah</p>
+</div>
+<div class="proof-strands">
+<div class="strand">
+<h3>Quranic Foundation</h3>
+<p>Revealed knowledge in Quran 30:30 and the primordial covenant in 7:172</p>
+</div>
+<div class="strand">
+<h3>Scientific Research</h3>
+<p>Empirical data from developmental psychology studies (Petrovich, Barrett, Kelemen)</p>
+</div>
+<div class="strand">
+<h3>Historical Evidence</h3>
+<p>Anthropological data showing universal belief across all human societies</p>
+</div>
+<div class="strand">
+<h3>Philosophical Arguments</h3>
+<p>Logical and epistemological analysis of innate cognitive tendencies</p>
+</div>
+</div>
+<p class="centered-text">These independent lines of evidence converge to demonstrate that belief in Allah is indeed the natural human disposition</p>
+<div class="accumulation-graph"><svg width="600" height="400" viewBox="0 0 600 400"><text x="300" y="30" text-anchor="middle" fill="#333" font-size="14">These independent lines of evidence converge to demonstrate that belief in Allah is indeed the natural human disposition</text><line x1="50" y1="350" x2="550" y2="350" stroke="#333" stroke-width="2"></line><line x1="50" y1="350" x2="50" y2="50" stroke="#333" stroke-width="2"></line><text x="300" y="380" text-anchor="middle" fill="#333" font-size="14">Number of Independent Lines of Evidence for Fitrah</text><text x="100" y="370" text-anchor="middle" fill="#333" font-size="12">1</text><text x="200" y="370" text-anchor="middle" fill="#333" font-size="12">2</text><text x="300" y="370" text-anchor="middle" fill="#333" font-size="12">3</text><text x="400" y="370" text-anchor="middle" fill="#333" font-size="12">4</text><text x="500" y="370" text-anchor="middle" fill="#333" font-size="12">5</text><text x="30" y="200" text-anchor="middle" fill="#333" font-size="14" transform="rotate(-90, 30, 200)">Probability</text><text x="40" y="350" text-anchor="end" fill="#333" font-size="12">0</text><text x="40" y="300" text-anchor="end" fill="#333" font-size="12">0.25</text><text x="40" y="250" text-anchor="end" fill="#333" font-size="12">0.5</text><text x="40" y="200" text-anchor="end" fill="#333" font-size="12">0.75</text><text x="40" y="150" text-anchor="end" fill="#333" font-size="12">1.0</text><path d="M100,300 L200,270 L300,230 L400,180 L500,150" fill="none" stroke="#5bc0be" stroke-width="3"></path><circle cx="100" cy="300" r="6" fill="#3a506b"></circle><circle cx="200" cy="270" r="6" fill="#3a506b"></circle><circle cx="300" cy="230" r="6" fill="#3a506b"></circle><circle cx="400" cy="180" r="6" fill="#3a506b"></circle><circle cx="500" cy="150" r="6" fill="#3a506b"></circle><text x="100" y="315" text-anchor="middle" fill="#333" font-size="12">Anthropological</text><text x="200" y="285" text-anchor="middle" fill="#333" font-size="12">+Psychological</text><text x="300" y="245" text-anchor="middle" fill="#333" font-size="12">+Philosophical</text><text x="400" y="195" text-anchor="middle" fill="#333" font-size="12">+Historical</text><text x="500" y="135" text-anchor="middle" fill="#333" font-weight="bold" font-size="14">Quranic</text></svg></div>
+</div>
+</section>
+<!-- Slide 18: Mathematical Accumulation -->
+<section class="slide" id="slide-18">
+<div class="content">
+<h2>Mathematical Representation of the Fitrah Case</h2>
+<div class="mathematical-explanation">
+<p>Using probability theory, we can model how multiple independent lines of evidence for fitrah strengthen the case:</p>
+<div class="equation">
+<p>Let P(F|E) represent the probability that fitrah is a genuine innate disposition given evidence E</p>
+<p>Let E<sub>1</sub> = Children's natural theism (Petrovich studies)</p>
+<p>Let E<sub>2</sub> = Universal religious tendencies across all cultures</p>
+<p>Let E<sub>3</sub> = Historical evidence of belief as default in all societies</p>
+<p>Let E<sub>4</sub> = Philosophical coherence of fitrah with other innate dispositions</p>
+<p>P(F|E<sub>1</sub>∧E<sub>2</sub>∧E<sub>3</sub>∧E<sub>4</sub>) &gt;&gt; P(F|E<sub>1</sub>)</p>
+</div>
+<p>The multiple independent sources of evidence combine to create a powerful cumulative case that significantly strengthens confidence in the Islamic concept of fitrah.</p>
+</div>
+<div class="accumulation-graph">
+<!-- SVG graph will be injected here from assets/accumulation_graph.svg -->
+</div>
+<p class="caption">The strength of the case for fitrah grows substantially as independent lines of evidence accumulate</p>
+</div>
+</section>
+<!-- Slide 19: Bayesian Approach -->
+<section class="slide" id="slide-19">
+<div class="content">
+<h2>Bayesian Analysis of Fitrah Evidence</h2>
+<div class="bayesian-formula">
+<p>Bayes' Theorem: P(F|E) = [P(E|F) × P(F)] / P(E)</p>
+<p>Where:</p>
+<ul>
+<li>F = "The Islamic concept of fitrah is true - humans have an innate disposition to believe in Allah"</li>
+<li>E = Evidence from developmental psychology, cross-cultural studies, etc.</li>
+<li>P(F|E) = Probability that fitrah is true given our evidence</li>
+<li>P(E|F) = Probability we would observe this evidence if fitrah is true</li>
+<li>P(F) = Prior probability that fitrah is true</li>
+<li>P(E) = General probability of observing the evidence</li>
+</ul>
+</div>
+<div class="bayesian-analysis">
+<h3>Key Points:</h3>
+<p>1. If fitrah is true (F), we would expect to find exactly the evidence (E) we do: children across cultures naturally forming concepts of a creator Allah/God.</p>
+<p>2. P(E|F) is extremely high - the evidence is precisely what we'd predict if fitrah is true.</p>
+<p>3. P(E|¬F) is very low - without fitrah, it's difficult to explain why children universally form these concepts.</p>
+<p>4. Therefore, the evidence strongly confirms fitrah - P(F|E) &gt;&gt; P(F)</p>
+</div>
+</div>
+</section>
+<!-- Slide 20: Explanatory Scope -->
+<section class="slide" id="slide-20">
+<div class="content">
+<h2>Explanatory Power of Theism</h2>
+<div class="explanation-comparison">
+<div class="theistic-explanation">
+<h3>Theistic Explanation</h3>
+<p>God designed human cognitive architecture with capacity to recognize Him</p>
+<p>Explains:</p>
+<ul>
+<li>Universality of theistic intuition</li>
+<li>Early emergence in cognitive development</li>
+<li>Resilience despite cultural differences</li>
+<li>Alignment with other reliable cognitive faculties</li>
+</ul>
+</div>
+<div class="naturalistic-explanation">
+<h3>Naturalistic Explanation</h3>
+<p>Agency detection evolved for predator detection</p>
+<p>Challenges:</p>
+<ul>
+<li>Why does it persist in modern environments?</li>
+<li>Why specifically divine/creator attribution?</li>
+<li>Why is atheism cognitively effortful?</li>
+<li>Doesn't explain specific theological intuitions</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Slide 21: Scientific Voices -->
+<section class="slide" id="slide-21">
+<div class="content">
+<h2>Scientific Perspectives on Innate Belief</h2>
+<div class="quotes-container">
+<div class="quote">
+<blockquote>
+                                "Human beings have natural tendencies to believe in gods, afterlife, design in nature and moral realism because of the way their minds have evolved."
+                                <cite>— Dr. Justin Barrett, Cognitive Scientist</cite>
+</blockquote>
+</div>
+<div class="quote">
+<blockquote>
+                                "Children are born believers in God, seeing the natural world as designed and purposeful and even understanding that God made their bodies."
+                                <cite>— Dr. Olivera Petrovich, Developmental Psychologist</cite>
+</blockquote>
+</div>
+<div class="quote">
+<blockquote>
+                                "Humans are naturally equipped with mental tools that make religious beliefs and practices readily acquirable, pancultural features of human life."
+                                <cite>— Dr. Robert McCauley, Cognitive Scientist of Religion</cite>
+</blockquote>
+</div>
+</div>
+<div class="background-image fade" style="background-image: url(&#39;https://images.unsplash.com/photo-1561481006-40fb19b8ecf6&#39;)"></div>
+</div>
+</section>
+<!-- Slide 22: Philosophical Foundations of Fitrah -->
+<section class="slide" id="slide-22">
+<div class="content">
+<h2>Philosophical Foundations of Fitrah</h2>
+<div class="philosophical-model"><svg width="600" height="200" viewBox="0 0 600 200"><circle cx="300" cy="100" r="50" fill="#5bc0be" opacity="0.7"></circle><text x="300" y="105" text-anchor="middle" fill="#333" font-size="16">Fitrah</text><circle cx="150" cy="75" r="40" fill="#3a506b" opacity="0.7"></circle><text x="150" y="80" text-anchor="middle" fill="#fff" font-size="14">Epistemology</text><circle cx="150" cy="150" r="40" fill="#3a506b" opacity="0.7"></circle><text x="150" y="155" text-anchor="middle" fill="#fff" font-size="14">Psychology</text><circle cx="450" cy="75" r="40" fill="#3a506b" opacity="0.7"></circle><text x="450" y="80" text-anchor="middle" fill="#fff" font-size="14">Theology</text><circle cx="450" cy="150" r="40" fill="#3a506b" opacity="0.7"></circle><text x="450" y="155" text-anchor="middle" fill="#fff" font-size="14">Anthropology</text><line x1="255" y1="85" x2="190" y2="75" stroke="#333" stroke-width="1.5"></line><line x1="255" y1="115" x2="190" y2="150" stroke="#333" stroke-width="1.5"></line><line x1="345" y1="85" x2="410" y2="75" stroke="#333" stroke-width="1.5"></line><line x1="345" y1="115" x2="410" y2="150" stroke="#333" stroke-width="1.5"></line></svg></div>
+<div class="philosophical-lines-of-evidence">
+<h3>Multiple Lines of Evidence for Fitrah as Universal Truth</h3>
+<div class="evidence-lines">
+<div class="evidence-line">
+<h4>1. Universality Argument</h4>
+<p>Universal presence across all cultures and time periods suggests objective rather than subjective basis</p>
+</div>
+<div class="evidence-line">
+<h4>2. Ontological Necessity</h4>
+<p>The recognition of a necessary being suggests an intuitive grasp of modal categories</p>
+</div>
+<div class="evidence-line">
+<h4>3. Epistemological Directness</h4>
+<p>Fitrah operates as a form of direct, non-inferential knowledge, similar to perception</p>
+</div>
+<div class="evidence-line">
+<h4>4. Primordial Recognition</h4>
+<p>Children naturally form the concept prior to cultural influence, suggesting innate origin</p>
+</div>
+<div class="evidence-line">
+<h4>5. Rational Irreducibility</h4>
+<p>Cannot be reduced to other cognitive faculties; stands as a distinct human capacity</p>
+</div>
+</div>
+<p class="centered-text">The convergence of these independent lines of evidence establishes fitrah as a universal feature of human nature, not merely a cultural artifact</p>
+</div>
+</div>
+</section>
+<!-- Slide 23: Philosophical and Historical Support for Fitrah -->
+<section class="slide" id="slide-23">
+<div class="content">
+<h2>Philosophical and Historical Evidence for Fitrah</h2>
+<div class="two-column">
+<div class="column">
+<h3>Complex Philosophical Arguments</h3>
+<div class="formal-logic">
+<h4>Transcendental Argument from <span class="arabic-term">الفطرة</span> (Fitrah):</h4>
+<ol>
+<li>The universal human experience of <span class="arabic-term">الفطرة</span> (innate recognition of Allah) requires explanation</li>
+<li>Either this disposition exists because Allah placed it within us, or it is a false cognitive tendency</li>
+<li>If it is false, we must explain why a false cognitive tendency would be universal</li>
+<li>The naturalistic explanation struggles to explain why humans would develop specific theistic beliefs rather than general agency detection</li>
+<li>The Islamic account of <span class="arabic-term">الفطرة</span> provides a coherent explanation for this universal human disposition</li>
+</ol>
+<h4>Modal Ontological Extension:</h4>
+<p>The natural human disposition to believe in a necessary being (Allah) suggests an intuitive recognition of ontological necessity</p>
+</div>
+</div>
+<div class="column">
+<h3>Historical Documentation of <span class="arabic-term">الفطرة</span></h3>
+<div class="references-list">
+<div class="reference">Ibn Taymiyyah (1263-1328): Documented in "Dar' Ta'arud al-'Aql wan-Naql" extensive evidence for <span class="arabic-term">الفطرة</span> as the natural human state</div>
+<div class="reference">Al-Ghazali (1058-1111): In "Ihya 'Ulum al-Din" describes the innate knowledge of God that precedes acquired knowledge</div>
+<div class="reference">Ibn Qayyim (1292-1350): In "Shifaa al-'Aleel" provided detailed analysis of the innate human disposition toward monotheism</div>
+<div class="reference">Wilhelm Schmidt (1868-1954): Anthropologist whose extensive research in "The Origin of the Idea of God" documented monotheism as the earliest form of religious belief in most cultures</div>
+<div class="reference">Andrew Lang (1844-1912): In "The Making of Religion" documented evidence that the earliest religious beliefs were monotheistic across diverse cultures</div>
+</div>
+</div>
+</div>
+<h3 class="centered-text">Shared Properties Between Belief in External World &amp; Belief in Allah</h3>
+<div class="shared-properties-diagram"><p>Error loading shared properties diagram. Please refresh the page.</p></div>
+<h3 class="centered-text">The Convergence of Evidence for Fitrah</h3>
+<div class="convergence-evidence-container">
+<img alt="Convergence of Evidence for Fitrah" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjYwMCIgaGVpZ2h0PSI0MDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDYwMCA0MDAiPgogICAgPCEtLSBCYWNrZ3JvdW5kIC0tPgogICAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjYwMCIgaGVpZ2h0PSI0MDAiIGZpbGw9IiNmOGY5ZmEiIHJ4PSIxMCIgcnk9IjEwIi8+CiAgICAKICAgIDwhLS0gQ2VudGVyIGZvY2FsIHBvaW50OiBGaXRyYWggLS0+CiAgICA8Y2lyY2xlIGN4PSIzMDAiIGN5PSIyMDAiIHI9IjcwIiBmaWxsPSIjNWJjMGJlIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMyIvPgogICAgPHRleHQgeD0iMzAwIiB5PSIxOTAiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2ZmZiIgZm9udC13ZWlnaHQ9ImJvbGQiPtin2YTZgdi32LHYqTwvdGV4dD4KICAgIDx0ZXh0IHg9IjMwMCIgeT0iMjE1IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNmZmYiPkZpdHJhaDwvdGV4dD4KICAgIAogICAgPCEtLSBFdmlkZW5jZSBTdHJlYW1zIGZsb3dpbmcgaW50byBGaXRyYWggLS0+CiAgICA8IS0tIFN0cmVhbSAxOiBEZXZlbG9wbWVudGFsIFBzeWNob2xvZ3kgLS0+CiAgICA8cGF0aCBkPSJNMTAwLDgwIFEyMDAsMTUwIDMwMCwyMDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzNhNTA2YiIgc3Ryb2tlLXdpZHRoPSI2IiBzdHJva2Utb3BhY2l0eT0iMC43IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICAgIDxjaXJjbGUgY3g9IjEwMCIgY3k9IjgwIiByPSI0MCIgZmlsbD0iIzNhNTA2YiIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjIiLz4KICAgIDx0ZXh0IHg9IjEwMCIgeT0iNzUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2ZmZiI+RGV2ZWxvcG1lbnRhbDwvdGV4dD4KICAgIDx0ZXh0IHg9IjEwMCIgeT0iOTAiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2ZmZiI+UHN5Y2hvbG9neTwvdGV4dD4KICAgIDx0ZXh0IHg9IjE3MCIgeT0iMTIwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiIGZpbGw9IiMzMzMiIHRyYW5zZm9ybT0icm90YXRlKC0xNSwgMTcwLCAxMjApIj5DaGlsZHJlbiBuYXR1cmFsbHkgYmVsaWV2ZTwvdGV4dD4KICAgIAogICAgPCEtLSBTdHJlYW0gMjogQW50aHJvcG9sb2d5IC0tPgogICAgPHBhdGggZD0iTTgwLDIwMCBRMTkwLDIwMCAzMDAsMjAwIiBmaWxsPSJub25lIiBzdHJva2U9IiMzYTUwNmIiIHN0cm9rZS13aWR0aD0iNiIgc3Ryb2tlLW9wYWNpdHk9IjAuNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgICA8Y2lyY2xlIGN4PSI4MCIgY3k9IjIwMCIgcj0iNDAiIGZpbGw9IiMzYTUwNmIiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICA8dGV4dCB4PSI4MCIgeT0iMjA1IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNmZmYiPkFudGhyb3BvbG9neTwvdGV4dD4KICAgIDx0ZXh0IHg9IjE3MCIgeT0iMTgwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiIGZpbGw9IiMzMzMiPlVuaXZlcnNhbCBhY3Jvc3MgY3VsdHVyZXM8L3RleHQ+CiAgICAKICAgIDwhLS0gU3RyZWFtIDM6IEhpc3RvcnkgLS0+CiAgICA8cGF0aCBkPSJNMTAwLDMyMCBRMjAwLDI1MCAzMDAsMjAwIiBmaWxsPSJub25lIiBzdHJva2U9IiMzYTUwNmIiIHN0cm9rZS13aWR0aD0iNiIgc3Ryb2tlLW9wYWNpdHk9IjAuNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgICA8Y2lyY2xlIGN4PSIxMDAiIGN5PSIzMjAiIHI9IjQwIiBmaWxsPSIjM2E1MDZiIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMiIvPgogICAgPHRleHQgeD0iMTAwIiB5PSIzMjUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2ZmZiI+SGlzdG9yeTwvdGV4dD4KICAgIDx0ZXh0IHg9IjE3MCIgeT0iMjkwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiIGZpbGw9IiMzMzMiIHRyYW5zZm9ybT0icm90YXRlKDE1LCAxNzAsIDI5MCkiPkVhcmxpZXN0IGJlbGllZnMgbW9ub3RoZWlzdGljPC90ZXh0PgogICAgCiAgICA8IS0tIFN0cmVhbSA0OiBQaGlsb3NvcGh5IC0tPgogICAgPHBhdGggZD0iTTUwMCw4MCBRNDAwLDE1MCAzMDAsMjAwIiBmaWxsPSJub25lIiBzdHJva2U9IiMzYTUwNmIiIHN0cm9rZS13aWR0aD0iNiIgc3Ryb2tlLW9wYWNpdHk9IjAuNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgICA8Y2lyY2xlIGN4PSI1MDAiIGN5PSI4MCIgcj0iNDAiIGZpbGw9IiMzYTUwNmIiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICA8dGV4dCB4PSI1MDAiIHk9Ijg1IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNmZmYiPlBoaWxvc29waHk8L3RleHQ+CiAgICA8dGV4dCB4PSI0MzAiIHk9IjEyMCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjExIiBmaWxsPSIjMzMzIiB0cmFuc2Zvcm09InJvdGF0ZSgxNSwgNDMwLCAxMjApIj5Qcm9wZXJseSBiYXNpYyBiZWxpZWY8L3RleHQ+CiAgICAKICAgIDwhLS0gU3RyZWFtIDU6IFJldmVsYXRpb24gKFF1cmFuKSAtIFRoZSBNb3N0IEltcG9ydGFudCBFdmlkZW5jZSAtLT4KICAgIDxwYXRoIGQ9Ik01MjAsMjAwIFE0MTAsMjAwIDMwMCwyMDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmOWYxYyIgc3Ryb2tlLXdpZHRoPSI4IiBzdHJva2Utb3BhY2l0eT0iMC45IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICAgIDxjaXJjbGUgY3g9IjUyMCIgY3k9IjIwMCIgcj0iNDUiIGZpbGw9IiNmZjlmMWMiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICA8dGV4dCB4PSI1MjAiIHk9IjE5NSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjZmZmIiBmb250LXdlaWdodD0iYm9sZCI+UXVyYW5pYzwvdGV4dD4KICAgIDx0ZXh0IHg9IjUyMCIgeT0iMjE1IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNmZmYiIGZvbnQtd2VpZ2h0PSJib2xkIj5FdmlkZW5jZTwvdGV4dD4KICAgIDx0ZXh0IHg9IjQzMCIgeT0iMTgwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiMzMzMiIGZvbnQtd2VpZ2h0PSJib2xkIj5EaXZpbmUgcmV2ZWxhdGlvbiBjb25maXJtczwvdGV4dD4KICAgIAogICAgPCEtLSBTdHJlYW0gNjogQ29nbml0aXZlIFNjaWVuY2UgLS0+CiAgICA8cGF0aCBkPSJNNTAwLDMyMCBRNDAwLDI1MCAzMDAsMjAwIiBmaWxsPSJub25lIiBzdHJva2U9IiMzYTUwNmIiIHN0cm9rZS13aWR0aD0iNiIgc3Ryb2tlLW9wYWNpdHk9IjAuNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgICA8Y2lyY2xlIGN4PSI1MDAiIGN5PSIzMjAiIHI9IjQwIiBmaWxsPSIjM2E1MDZiIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMiIvPgogICAgPHRleHQgeD0iNTAwIiB5PSIzMTUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2ZmZiI+Q29nbml0aXZlPC90ZXh0PgogICAgPHRleHQgeD0iNTAwIiB5PSIzMzAiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2ZmZiI+U2NpZW5jZTwvdGV4dD4KICAgIDx0ZXh0IHg9IjQzMCIgeT0iMjkwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiIGZpbGw9IiMzMzMiIHRyYW5zZm9ybT0icm90YXRlKC0xNSwgNDMwLCAyOTApIj5CdWlsdC1pbiBtZW50YWwgZmFjdWx0aWVzPC90ZXh0PgogICAgCiAgICA8IS0tIFRpdGxlIC0tPgogICAgPHRleHQgeD0iMzAwIiB5PSIzMCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjIwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMzMzIiBmb250LXdlaWdodD0iYm9sZCI+TXVsdGlwbGUgSW5kZXBlbmRlbnQgTGluZXMgb2YgRXZpZGVuY2U8L3RleHQ+CiAgICA8dGV4dCB4PSIzMDAiIHk9IjU1IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMzMzMiPkNvbnZlcmdpbmcgb24gdGhlIFRydXRoIG9mIEZpdHJhaDwvdGV4dD4KICAgIAogICAgPCEtLSBDYXB0aW9uIC0tPgogICAgPHRleHQgeD0iMzAwIiB5PSIzODAiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzMzMyIgZm9udC1zdHlsZT0iaXRhbGljIj5UaGVzZSBpbmRlcGVuZGVudCBzdHJlYW1zIG9mIGV2aWRlbmNlIGNvbnZlcmdlIHRvIGVzdGFibGlzaCB0aGF0IGJlbGllZiBpbiBBbGxhaDwvdGV4dD4KICAgIDx0ZXh0IHg9IjMwMCIgeT0iNDAwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMzMzMiIGZvbnQtc3R5bGU9Iml0YWxpYyI+aXMgaW5kZWVkIHRoZSBuYXR1cmFsIGh1bWFuIGRpc3Bvc2l0aW9uICjYp9mE2YHYt9ix2KkpPC90ZXh0Pgo8L3N2Zz4=" style="width: 100%; max-width: 600px; margin: 0 auto; display: block;">
+</div>
+<div class="philosophical-observation">
+<h3>Epistemological Significance:</h3>
+<p>The innate human disposition toward belief in Allah (<span class="arabic-term">الفطرة</span>) constitutes a form of non-inferential knowledge or <span class="key-concept">properly basic belief</span> that is epistemically warranted without requiring further evidential support. This is similar to other properly basic beliefs like the existence of other minds, the reality of the external world, and the reliability of memory, which are accepted as rational despite lacking inferential justification.</p>
+</div>
+</div>
+</section>
+<!-- New Slide 23A: Fitrah as Universal Truth -->
+<section class="slide" id="slide-23a">
+<div class="content">
+<h2>Fitrah as Universal Truth: Advanced Philosophical Analysis</h2>
+<div class="universal-truth-container">
+<div class="truth-argument">
+<h3>1. Argument from Transcendental Necessity</h3>
+<div class="formal-argument">
+<p><strong>Premise 1:</strong> Human cognitive faculties must have a reliable connection to truth to function properly.</p>
+<p><strong>Premise 2:</strong> The universal fitrah exists as a fundamental cognitive faculty across all cultures.</p>
+<p><strong>Premise 3:</strong> If fitrah were not tracking truth, it would represent a systematic cognitive failure without evolutionary or rational explanation.</p>
+<p><strong>Conclusion:</strong> Therefore, fitrah must be tracking a genuine transcendental truth about reality.</p>
+</div>
+</div>
+<div class="truth-argument">
+<h3>2. Noetic Structure Argument</h3>
+<div class="formal-argument">
+<p><strong>Premise 1:</strong> Human noetic structures include various properly basic faculties that provide direct knowledge.</p>
+<p><strong>Premise 2:</strong> Fitrah exhibits the same epistemological patterns as other properly basic faculties (immediate, universal, resistant to contrary arguments).</p>
+<p><strong>Premise 3:</strong> We accept other properly basic faculties as providing warranted true beliefs.</p>
+<p><strong>Conclusion:</strong> Therefore, similarly, fitrah provides warranted true beliefs about divine reality.</p>
+</div>
+</div>
+</div>
+<div class="universal-evidence">
+<h3>Evidence of Universality from Ibn Taymiyyah's Analysis:</h3>
+<blockquote>
+                            "The fitrah is found in every human being - if left unaltered by external influences, every person acknowledges the existence of the Creator and turns to Him in times of hardship. This natural disposition toward monotheism is found across all nations and throughout history, and can only be changed through external corruption of one's natural state."
+                            <cite>— Adapted from "Majmu' al-Fatawa"</cite>
+</blockquote>
+</div>
+</div>
+</section>
+<!-- Slide 23B: Fitrah as Universal Truth - Epistemological Analysis -->
+<section class="slide" id="slide-23b">
+<div class="content">
+<h2>Fitrah as Universal Truth: Epistemological Foundations</h2>
+<div class="epistemic-container">
+<h3>The Universality Thesis of Fitrah</h3>
+<div class="epistemic-table">
+<div class="epistemic-row header">
+<div class="epistemic-cell">Criteria for Universal Truth</div>
+<div class="epistemic-cell">Evidence for Fitrah</div>
+</div>
+<div class="epistemic-row">
+<div class="epistemic-cell"><strong>1. Temporal Universality</strong><br>Present across all historical periods</div>
+<div class="epistemic-cell">Historical documentation shows belief in creator deity precedes polytheistic developments in all studied ancient civilizations</div>
+</div>
+<div class="epistemic-row">
+<div class="epistemic-cell"><strong>2. Geographic Universality</strong><br>Present across all cultural regions</div>
+<div class="epistemic-cell">Anthropological studies show belief in supreme creator being across all documented indigenous cultures on all continents</div>
+</div>
+<div class="epistemic-row">
+<div class="epistemic-cell"><strong>3. Developmental Universality</strong><br>Natural emergence in cognitive development</div>
+<div class="epistemic-cell">Cross-cultural developmental psychology research shows children naturally form theistic concepts without explicit instruction</div>
+</div>
+<div class="epistemic-row">
+<div class="epistemic-cell"><strong>4. Epistemological Durability</strong><br>Resistant to complete elimination</div>
+<div class="epistemic-cell">Even in atheistic societies, belief reappears naturally in subsequent generations without external influence</div>
+</div>
+</div>
+<div class="key-conclusion">
+<h3>Alvin Plantinga's Reformed Epistemology Applied to Fitrah:</h3>
+<p>"When a belief is formed by cognitive faculties functioning properly in an appropriate environment according to a design plan successfully aimed at truth, that belief has warrant. The universal human disposition toward belief in God (fitrah) satisfies these conditions and thus possesses strong warrant."</p>
+</div>
+<div class="philosophical-observation">
+<h3>Modal Logic Analysis:</h3>
+<p>If we let F represent "fitrah accurately tracks truth about God's existence" and U represent "fitrah is a universal human disposition," then:</p>
+<p>P1: □(U → (F ∨ systematic cognitive error))</p>
+<p>P2: ¬◊(systematic cognitive error in fundamental faculty)</p>
+<p>C: Therefore, □(U → F)</p>
+<p>Meaning: Necessarily, if fitrah is universal (which it demonstrably is), then it must be tracking truth about reality.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Slide 24: Future Research Directions -->
+<section class="slide" id="slide-24">
+<div class="content">
+<h2>Future Research Directions</h2>
+<div class="research-directions">
+<div class="direction">
+<h3>Longitudinal Studies</h3>
+<p>Track development of religious concepts throughout lifespan</p>
+</div>
+<div class="direction">
+<h3>Neuroscientific Investigation</h3>
+<p>Brain imaging studies on innate religious cognition</p>
+</div>
+<div class="direction">
+<h3>Cross-Cultural Expansion</h3>
+<p>Broader sampling of indigenous and non-Western perspectives</p>
+</div>
+<div class="direction">
+<h3>Integration with Philosophy</h3>
+<p>Further development of epistemological implications</p>
+</div>
+</div>
+<div class="image-container">
+<img alt="Scientific research illustration" src="./Fitrah_ The Innate Disposition to Believe in God_files/photo-1561622539-dffbfc2008fd">
+<p class="caption">The scientific investigation continues to evolve</p>
+</div>
+</div>
+</section>
+<!-- Slide 25: Summary of Evidence -->
+<section class="slide" id="slide-25">
+<div class="content">
+<h2>Summary of Evidence for Fitrah</h2>
+<div class="evidence-summary">
+<div class="evidence-point">
+<h3>Developmental Psychology</h3>
+<p>Children naturally form concepts of supernatural causation</p>
+</div>
+<div class="evidence-point">
+<h3>Cross-Cultural Studies</h3>
+<p>Universal patterns of belief emergence across cultures</p>
+</div>
+<div class="evidence-point">
+<h3>Cognitive Science</h3>
+<p>Agency detection and teleological thinking hardwired in cognition</p>
+</div>
+<div class="evidence-point">
+<h3>Philosophical Analysis</h3>
+<p>Coherence with other properly basic beliefs</p>
+</div>
+</div>
+<div class="conclusion-statement">
+<p>The evidence suggests that belief in God is a natural disposition of human cognition, providing rational warrant for theistic belief.</p>
+</div>
+</div>
+</section>
+<!-- Slide 26: Objections and Responses Summary -->
+<section class="slide" id="slide-26">
+<div class="content">
+<h2>Common Objections and Responses</h2>
+<div class="objections-responses">
+<div class="obj-resp">
+<h3>Objection: Cultural Variation</h3>
+<p>Response: Universal cognitive architecture with cultural expressions</p>
+</div>
+<div class="obj-resp">
+<h3>Objection: Evolutionary Byproduct</h3>
+<p>Response: Origin doesn't determine reliability; many true beliefs have evolutionary origins</p>
+</div>
+<div class="obj-resp">
+<h3>Objection: Cognitive Bias</h3>
+<p>Response: Universal innate dispositions differ from individual biases</p>
+</div>
+<div class="obj-resp">
+<h3>Objection: Specific Religious Claims</h3>
+<p>Response: Fitrah argument supports general theism, not specific doctrines</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Slide 27: Practical Implications -->
+<section class="slide" id="slide-27">
+<div class="content">
+<h2>Practical Implications</h2>
+<div class="implications-container">
+<div class="implication">
+<h3>Educational</h3>
+<p>Understanding children's natural religious concepts</p>
+</div>
+<div class="implication">
+<h3>Philosophical</h3>
+<p>Reconsideration of epistemological defaults in religious belief</p>
+</div>
+<div class="implication">
+<h3>Interfaith Dialogue</h3>
+<p>Recognition of shared cognitive foundations across traditions</p>
+</div>
+<div class="implication">
+<h3>Personal Faith</h3>
+<p>Confidence in rational basis for religious belief</p>
+</div>
+</div>
+<div class="image-container">
+<img alt="Child in natural setting" class="blur-faces" src="./Fitrah_ The Innate Disposition to Believe in God_files/photo-1505155485412-30b3a45080ec">
+<p class="caption">Understanding fitrah has implications across multiple domains</p>
+</div>
+</div>
+</section>
+<!-- Slide 28: Broader Perspectives -->
+<section class="slide" id="slide-28">
+<div class="content">
+<h2>Fitrah in Broader Context</h2>
+<div class="two-column">
+<div class="column">
+<h3>Islamic Perspectives</h3>
+<p>"Every child is born in a state of fitrah" - Sahih Muslim</p>
+<p>"So direct your face toward the religion, inclining to truth. [Adhere to] the fitrah of Allah upon which He has created [all] people." - Quran 30:30</p>
+<p>"Allah took Adam's offspring from his loins and made them testify against themselves, 'Am I not your Lord?' They said, 'Yes.'" - Quran 7:172</p>
+</div>
+<div class="column">
+<h3>Philosophical Perspectives</h3>
+<p>"There is a God-shaped vacuum in the heart of each man" - Blaise Pascal</p>
+<p>"The divine is naturally known to all" - Thomas Aquinas</p>
+<p>"The idea of God is innate in human nature" - René Descartes</p>
+</div>
+</div>
+<div class="background-image fade" style="background-image: url(&#39;https://images.unsplash.com/photo-1676807446470-2cd3052649de&#39;)"></div>
+</div>
+</section>
+<!-- Slide 29: Conclusion -->
+<section class="slide" id="slide-29">
+<div class="content">
+<h2>Conclusion</h2>
+<div class="conclusion-points">
+<p>The fitrah argument suggests:</p>
+<ul>
+<li>Belief in God emerges naturally in human cognitive development</li>
+<li>This tendency is observed across cultures and time periods</li>
+<li>Scientific research increasingly supports this understanding</li>
+<li>It provides a rational basis for theistic belief</li>
+<li>The argument strengthens the cumulative case for God's existence</li>
+</ul>
+<p class="final-statement">Our natural disposition to believe in God aligns with our other reliable cognitive faculties, suggesting that this intuition is tracking a fundamental truth about reality.</p>
+</div>
+</div>
+</section>
+<!-- Slide 30: References -->
+<section class="slide" id="slide-30">
+<div class="content">
+<h2>References</h2>
+<div class="references-list">
+<div class="reference">
+<p>Barrett, J. L. (2012). Born believers: The science of children's religious belief. Free Press.</p>
+</div>
+<div class="reference">
+<p>Kelemen, D. (2004). Are children "intuitive theists"? Reasoning about purpose and design in nature. Psychological Science, 15(5), 295-301.</p>
+</div>
+<div class="reference">
+<p>Petrovich, O. (1999). Understanding of non-natural causality in children and adults: A case against artificialism. Psyche en Geloof, 10, 151-165.</p>
+</div>
+<div class="reference">
+<p>Plantinga, A. (2000). Warranted Christian belief. Oxford University Press.</p>
+</div>
+<div class="reference">
+<p>McCauley, R. N. (2011). Why religion is natural and science is not. Oxford University Press.</p>
+</div>
+<div class="reference">
+<p>Guthrie, S. E. (1993). Faces in the clouds: A new theory of religion. Oxford University Press.</p>
+</div>
+<div class="reference">
+<p>Boyer, P. (2001). Religion explained: The evolutionary origins of religious thought. Basic Books.</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<script src="file:///C:/Users/habuk/Downloads/js/data.js"></script>
+<script src="file:///C:/Users/habuk/Downloads/js/animations.js"></script>
+<script src="file:///C:/Users/habuk/Downloads/js/presentation.js"></script>
+<script>document.addEventListener('DOMContentLoaded', function() {
+    // Slide navigation variables
+    const slides = document.querySelectorAll('.slide');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const slideCounter = document.getElementById('slide-counter');
+    const fullscreenBtn = document.getElementById('fullscreen-btn');
+    let currentSlideIndex = 0;
+
+    // Initialize slide counter
+    updateSlideCounter();
+
+    // Event listeners for buttons
+    prevBtn.addEventListener('click', prevSlide);
+    nextBtn.addEventListener('click', nextSlide);
+    fullscreenBtn.addEventListener('click', toggleFullscreen);
+
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
+            nextSlide();
+        } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+            prevSlide();
+        } else if (e.key === 'f' || e.key === 'F') {
+            toggleFullscreen();
+        }
+    });
+
+    // Touch navigation
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    document.addEventListener('touchstart', function(e) {
+        touchStartX = e.changedTouches[0].screenX;
+    });
+    
+    document.addEventListener('touchend', function(e) {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    });
+    
+    function handleSwipe() {
+        const threshold = 50;
+        if (touchEndX < touchStartX - threshold) {
+            nextSlide(); // Swipe left
+        } else if (touchEndX > touchStartX + threshold) {
+            prevSlide(); // Swipe right
+        }
+    }
+
+    // Navigation functions
+    function nextSlide() {
+        changeSlide(currentSlideIndex + 1);
+    }
+
+    function prevSlide() {
+        changeSlide(currentSlideIndex - 1);
+    }
+
+    function changeSlide(index) {
+        // Remove active class from current slide
+        slides[currentSlideIndex].classList.remove('active');
+        
+        // Calculate new index within bounds
+        currentSlideIndex = index;
+        if (currentSlideIndex < 0) {
+            currentSlideIndex = slides.length - 1;
+        } else if (currentSlideIndex >= slides.length) {
+            currentSlideIndex = 0;
+        }
+        
+        // Add active class to new slide
+        slides[currentSlideIndex].classList.add('active');
+        
+        // Update slide counter
+        updateSlideCounter();
+
+        // Trigger animations for the current slide
+        triggerSlideAnimations(currentSlideIndex);
+    }
+
+    function updateSlideCounter() {
+        slideCounter.textContent = `${currentSlideIndex + 1} / ${slides.length}`;
+    }
+
+    function toggleFullscreen() {
+        if (!document.fullscreenElement) {
+            document.documentElement.requestFullscreen().catch(err => {
+                console.error(`Error attempting to enable full-screen mode: ${err.message}`);
+            });
+        } else {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            }
+        }
+    }
+
+    // Initialize charts and visualizations
+    initializeCharts();
+    
+    // Inject SVG content
+    injectSVGs();
+
+    // Initial animation for the first slide
+    triggerSlideAnimations(currentSlideIndex);
+});
+
+function initializeCharts() {
+    // Petrovich experiment results chart
+    const petrovichCtx = document.getElementById('petrovichChart');
+    if (petrovichCtx) {
+        new Chart(petrovichCtx, {
+            type: 'bar',
+            data: {
+                labels: ['British Children', 'Japanese Children'],
+                datasets: [
+                    {
+                        label: 'God/Creator Attribution for Natural Objects',
+                        data: [87, 65],
+                        backgroundColor: 'rgba(91, 192, 190, 0.7)',
+                        borderColor: 'rgba(91, 192, 190, 1)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Human Attribution for Natural Objects',
+                        data: [13, 35],
+                        backgroundColor: 'rgba(58, 80, 107, 0.7)',
+                        borderColor: 'rgba(58, 80, 107, 1)',
+                        borderWidth: 1
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        title: {
+                            display: true,
+                            text: 'Percentage (%)'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Child Population Group'
+                        }
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Petrovich Study Results: Attributions for Natural Objects',
+                        font: {
+                            size: 16
+                        }
+                    },
+                    legend: {
+                        position: 'bottom'
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.dataset.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                if (context.parsed.y !== null) {
+                                    label += context.parsed.y + '%';
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    // Create world map with D3 if the element exists
+    const worldMapElem = document.getElementById('world-map');
+    if (worldMapElem && d3) {
+        createWorldMap(worldMapElem);
+    }
+}
+
+function createWorldMap(container) {
+    // This is a simplified world map using D3.js
+    const width = container.clientWidth;
+    const height = 300;
+    
+    // Create SVG element
+    const svg = d3.select(container)
+        .append('svg')
+        .attr('width', width)
+        .attr('height', height);
+    
+    // Define map projection
+    const projection = d3.geoNaturalEarth1()
+        .scale(width / 5)
+        .translate([width / 2, height / 2]);
+        
+    // Define path generator
+    const path = d3.geoPath()
+        .projection(projection);
+    
+    // Define research points - these will be shown regardless
+    const researchPoints = [
+        { name: "Oxford, UK", coords: [-1.2577, 51.7520], study: "Petrovich" },
+        { name: "Harvard, USA", coords: [-71.1167, 42.3770], study: "Kelemen" },
+        { name: "Tokyo, Japan", coords: [139.6917, 35.6895], study: "Petrovich" },
+        { name: "Melbourne, Australia", coords: [144.9631, -37.8136], study: "Barrett" },
+        { name: "São Paulo, Brazil", coords: [-46.6333, -23.5505], study: "Cross-cultural" },
+        { name: "Nairobi, Kenya", coords: [36.8219, -1.2921], study: "Indigenous beliefs" }
+    ];
+    
+    // SIMPLIFIED APPROACH: Just draw continents directly with SVG paths
+    // This avoids any external data loading
+    
+    // Create our continents with simple paths
+    const continents = [
+        { name: "North America", path: "M100,100 L200,100 L200,180 L100,180 Z" },
+        { name: "South America", path: "M150,200 L200,200 L200,280 L150,280 Z" },
+        { name: "Europe", path: "M300,100 L350,100 L350,150 L300,150 Z" },
+        { name: "Africa", path: "M300,180 L360,180 L360,260 L300,260 Z" },
+        { name: "Asia", path: "M380,100 L480,100 L480,180 L380,180 Z" },
+        { name: "Australia", path: "M450,220 L500,220 L500,260 L450,260 Z" }
+    ];
+    
+    // Draw the continents
+    svg.selectAll('path.continent')
+        .data(continents)
+        .enter()
+        .append('path')
+        .attr('d', d => d.path)
+        .attr('class', 'continent')
+        .attr('fill', '#ccc')
+        .attr('stroke', '#fff')
+        .attr('stroke-width', 0.5)
+        .append('title')
+        .text(d => d.name);
+    
+    // Add main title
+    svg.append('text')
+        .attr('x', width/2)
+        .attr('y', 30)
+        .attr('text-anchor', 'middle')
+        .attr('font-size', '14px')
+        .attr('fill', '#333')
+        .text('Fitrah Research Locations Worldwide');
+    
+    // Add research points with different colors by study
+    svg.selectAll('circle')
+        .data(researchPoints)
+        .enter()
+        .append('circle')
+        .attr('cx', d => projection(d.coords)[0])
+        .attr('cy', d => projection(d.coords)[1])
+        .attr('r', 6)
+        .attr('fill', d => {
+            if (d.study === 'Petrovich') return '#ff6b6b';
+            if (d.study === 'Kelemen') return '#48dbfb';
+            if (d.study === 'Barrett') return '#1dd1a1';
+            return '#feca57';
+        })
+        .attr('stroke', '#333')
+        .attr('stroke-width', 1)
+        .append('title')
+        .text(d => `${d.name}: ${d.study} study`);
+    
+    // Add location labels
+    svg.selectAll('text.location')
+        .data(researchPoints)
+        .enter()
+        .append('text')
+        .attr('class', 'location')
+        .attr('x', d => projection(d.coords)[0] + 8)
+        .attr('y', d => projection(d.coords)[1] + 4)
+        .text(d => d.name)
+        .attr('font-size', '9px')
+        .attr('fill', '#333');
+}
+
+function injectSVGs() {
+    // Load the external SVG for innate disposition diagram
+    const innateDispositionContainers = document.querySelectorAll('.innate-disposition-diagram');
+    if (innateDispositionContainers && innateDispositionContainers.length > 0) {
+        fetch('assets/innate_disposition_diagram.svg')
+            .then(response => response.text())
+            .then(data => {
+                innateDispositionContainers.forEach(container => {
+                    container.innerHTML = data;
+                });
+            })
+            .catch(error => {
+                console.error('Error loading diagram:', error);
+                // Fallback if loading fails
+                innateDispositionContainers.forEach(container => {
+                    container.innerHTML = '<p>Error loading diagram. Please refresh the page.</p>';
+                });
+            });
+    }
+
+    // Load the shared properties visualization
+    const sharedPropertiesContainers = document.querySelectorAll('.shared-properties-diagram');
+    if (sharedPropertiesContainers && sharedPropertiesContainers.length > 0) {
+        fetch('assets/shared_properties.svg')
+            .then(response => response.text())
+            .then(data => {
+                sharedPropertiesContainers.forEach(container => {
+                    container.innerHTML = data;
+                });
+            })
+            .catch(error => {
+                console.error('Error loading shared properties diagram:', error);
+                sharedPropertiesContainers.forEach(container => {
+                    container.innerHTML = '<p>Error loading shared properties diagram. Please refresh the page.</p>';
+                });
+            });
+    }
+    
+    // Load the logical steps for transcendental argument
+    const logicalStepsContainers = document.querySelectorAll('.logical-argument-container');
+    if (logicalStepsContainers && logicalStepsContainers.length > 0) {
+        fetch('assets/logical_steps.svg')
+            .then(response => response.text())
+            .then(data => {
+                logicalStepsContainers.forEach(container => {
+                    container.innerHTML = data;
+                });
+            })
+            .catch(error => {
+                console.error('Error loading logical steps diagram:', error);
+                logicalStepsContainers.forEach(container => {
+                    container.innerHTML = '<p>Error loading logical steps. Please refresh the page.</p>';
+                });
+            });
+    }
+    
+    // We're using direct Object/embed for the modal transcendental argument instead of fetch
+    // This ensures better compatibility and guaranteed display
+    console.log("Modal transcendental diagram using direct object/embed for guaranteed display");
+
+    // Logical Symbols
+    const logicalSymbolsContainer = document.querySelector('.logical-symbols');
+    if (logicalSymbolsContainer) {
+        logicalSymbolsContainer.innerHTML = '<svg width="600" height="100" viewBox="0 0 600 100"><rect x="50" y="30" width="80" height="40" rx="5" fill="#3a506b" opacity="0.7" /><text x="90" y="55" text-anchor="middle" fill="#fff" font-size="16">∀x</text><text x="90" y="80" text-anchor="middle" fill="#333" font-size="10">Universal Quantifier</text><rect x="150" y="30" width="80" height="40" rx="5" fill="#3a506b" opacity="0.7" /><text x="190" y="55" text-anchor="middle" fill="#fff" font-size="16">∃x</text><text x="190" y="80" text-anchor="middle" fill="#333" font-size="10">Existential Quantifier</text><rect x="250" y="30" width="80" height="40" rx="5" fill="#5bc0be" opacity="0.7" /><text x="290" y="55" text-anchor="middle" fill="#fff" font-size="16">→</text><text x="290" y="80" text-anchor="middle" fill="#333" font-size="10">Implication</text><rect x="350" y="30" width="80" height="40" rx="5" fill="#5bc0be" opacity="0.7" /><text x="390" y="55" text-anchor="middle" fill="#fff" font-size="16">∧</text><text x="390" y="80" text-anchor="middle" fill="#333" font-size="10">Conjunction</text><rect x="450" y="30" width="80" height="40" rx="5" fill="#5bc0be" opacity="0.7" /><text x="490" y="55" text-anchor="middle" fill="#fff" font-size="16">∨</text><text x="490" y="80" text-anchor="middle" fill="#333" font-size="10">Disjunction</text></svg>';
+    }
+    
+    // Accumulation Graph - Option 5: Line going DOWN from right to left (reversed orientation)
+    const accumulationGraphContainer = document.querySelector('.accumulation-graph');
+    if (accumulationGraphContainer) {
+        accumulationGraphContainer.innerHTML = '<svg width="600" height="400" viewBox="0 0 600 400"><text x="300" y="30" text-anchor="middle" fill="#333" font-size="14">These independent lines of evidence converge to demonstrate that belief in Allah is indeed the natural human disposition</text><line x1="50" y1="350" x2="550" y2="350" stroke="#333" stroke-width="2" /><line x1="50" y1="350" x2="50" y2="50" stroke="#333" stroke-width="2" /><text x="300" y="380" text-anchor="middle" fill="#333" font-size="14">Number of Independent Lines of Evidence for Fitrah</text><text x="100" y="370" text-anchor="middle" fill="#333" font-size="12">1</text><text x="200" y="370" text-anchor="middle" fill="#333" font-size="12">2</text><text x="300" y="370" text-anchor="middle" fill="#333" font-size="12">3</text><text x="400" y="370" text-anchor="middle" fill="#333" font-size="12">4</text><text x="500" y="370" text-anchor="middle" fill="#333" font-size="12">5</text><text x="30" y="200" text-anchor="middle" fill="#333" font-size="14" transform="rotate(-90, 30, 200)">Probability</text><text x="40" y="350" text-anchor="end" fill="#333" font-size="12">0</text><text x="40" y="300" text-anchor="end" fill="#333" font-size="12">0.25</text><text x="40" y="250" text-anchor="end" fill="#333" font-size="12">0.5</text><text x="40" y="200" text-anchor="end" fill="#333" font-size="12">0.75</text><text x="40" y="150" text-anchor="end" fill="#333" font-size="12">1.0</text><path d="M100,300 L200,270 L300,230 L400,180 L500,150" fill="none" stroke="#5bc0be" stroke-width="3" /><circle cx="100" cy="300" r="6" fill="#3a506b" /><circle cx="200" cy="270" r="6" fill="#3a506b" /><circle cx="300" cy="230" r="6" fill="#3a506b" /><circle cx="400" cy="180" r="6" fill="#3a506b" /><circle cx="500" cy="150" r="6" fill="#3a506b" /><text x="100" y="315" text-anchor="middle" fill="#333" font-size="12">Anthropological</text><text x="200" y="285" text-anchor="middle" fill="#333" font-size="12">+Psychological</text><text x="300" y="245" text-anchor="middle" fill="#333" font-size="12">+Philosophical</text><text x="400" y="195" text-anchor="middle" fill="#333" font-size="12">+Historical</text><text x="500" y="135" text-anchor="middle" fill="#333" font-weight="bold" font-size="14">Quranic</text></svg>';
+    }
+    
+    // Philosophical Model
+    const philosophicalModelContainer = document.querySelector('.philosophical-model');
+    if (philosophicalModelContainer) {
+        philosophicalModelContainer.innerHTML = '<svg width="600" height="200" viewBox="0 0 600 200"><circle cx="300" cy="100" r="50" fill="#5bc0be" opacity="0.7" /><text x="300" y="105" text-anchor="middle" fill="#333" font-size="16">Fitrah</text><circle cx="150" cy="75" r="40" fill="#3a506b" opacity="0.7" /><text x="150" y="80" text-anchor="middle" fill="#fff" font-size="14">Epistemology</text><circle cx="150" cy="150" r="40" fill="#3a506b" opacity="0.7" /><text x="150" y="155" text-anchor="middle" fill="#fff" font-size="14">Psychology</text><circle cx="450" cy="75" r="40" fill="#3a506b" opacity="0.7" /><text x="450" y="80" text-anchor="middle" fill="#fff" font-size="14">Theology</text><circle cx="450" cy="150" r="40" fill="#3a506b" opacity="0.7" /><text x="450" y="155" text-anchor="middle" fill="#fff" font-size="14">Anthropology</text><line x1="255" y1="85" x2="190" y2="75" stroke="#333" stroke-width="1.5" /><line x1="255" y1="115" x2="190" y2="150" stroke="#333" stroke-width="1.5" /><line x1="345" y1="85" x2="410" y2="75" stroke="#333" stroke-width="1.5" /><line x1="345" y1="115" x2="410" y2="150" stroke="#333" stroke-width="1.5" /></svg>';
+    }
+}
+
+function triggerSlideAnimations(slideIndex) {
+    console.log(`Animating slide ${slideIndex + 1}`);
+    
+    // Get the current slide element
+    const slide = document.querySelectorAll('.slide')[slideIndex];
+    console.log("Animating slide", slide.id);
+    
+    // Trigger animations for specific slides
+    if (slideIndex === 6) { // Petrovich Results
+        // Chart.js animations are automatic
+    }
+    
+    if (slideIndex === 9) { // World map slide
+        // D3 animations would go here
+    }
+    
+    // All our new experiment detail slides get animations
+    if (slide.id === 'slide-petrovich-detail' || 
+        slide.id === 'slide-barrett-detail' || 
+        slide.id === 'slide-kelemen-detail') {
+        
+        // Animate experiment steps with a staggered delay
+        const steps = slide.querySelectorAll('.experiment-step, .experiment-results');
+        if (steps.length) {
+            steps.forEach((step, i) => {
+                setTimeout(() => {
+                    step.style.opacity = '0';
+                    step.style.transform = 'translateY(20px)';
+                    step.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                    
+                    setTimeout(() => {
+                        step.style.opacity = '1';
+                        step.style.transform = 'translateY(0)';
+                    }, 50);
+                }, i * 200);
+            });
+        }
+        
+        // Animate interview examples with a slight delay
+        const interviews = slide.querySelectorAll('.interview-example');
+        if (interviews.length) {
+            setTimeout(() => {
+                interviews.forEach(interview => {
+                    interview.style.opacity = '0';
+                    interview.style.transition = 'opacity 0.8s ease';
+                    
+                    setTimeout(() => {
+                        interview.style.opacity = '1';
+                    }, 100);
+                });
+            }, 400);
+        }
+    }
+    
+    // Special animations for fitrah-focused slides
+    if (slide.id === 'slide-23' || slide.id === 'slide-23a' || slide.id === 'slide-23b') {
+        // Initialize any component animations
+        animateSlide(slide);
+        
+        // Find SVG elements to highlight through specific animations
+        setTimeout(() => {
+            // For slide with transcendental argument, highlight each step in sequence
+            if (slide.id === 'slide-23a') {
+                const logicalSteps = slide.querySelectorAll('.logical-step');
+                if (logicalSteps.length) {
+                    logicalSteps.forEach((step, index) => {
+                        setTimeout(() => {
+                            step.classList.add('active-step');
+                            // Add a temporary highlight class
+                            step.classList.add('highlight-step');
+                            
+                            // Remove the highlight after animation completes
+                            setTimeout(() => {
+                                step.classList.remove('highlight-step');
+                            }, 800);
+                        }, 800 * index);
+                    });
+                }
+            }
+            
+            // For shared properties slide, highlight the connection
+            if (slide.id === 'slide-23') {
+                const circles = slide.querySelectorAll('circle');
+                const sharedBox = slide.querySelector('.shared-properties-box');
+                
+                if (circles.length >= 2 && sharedBox) {
+                    setTimeout(() => {
+                        circles[0].style.stroke = '#5bc0be';
+                        circles[0].style.strokeWidth = '3';
+                        circles[0].style.transition = 'stroke 0.5s ease, stroke-width 0.5s ease';
+                        
+                        setTimeout(() => {
+                            circles[1].style.stroke = '#5bc0be';
+                            circles[1].style.strokeWidth = '3';
+                            circles[1].style.transition = 'stroke 0.5s ease, stroke-width 0.5s ease';
+                            
+                            setTimeout(() => {
+                                sharedBox.style.stroke = '#5bc0be';
+                                sharedBox.style.strokeWidth = '3';
+                                sharedBox.style.transition = 'stroke 0.5s ease, stroke-width 0.5s ease';
+                                
+                                // Reset after animation completes
+                                setTimeout(() => {
+                                    circles[0].style.stroke = '';
+                                    circles[0].style.strokeWidth = '';
+                                    circles[1].style.stroke = '';
+                                    circles[1].style.strokeWidth = '';
+                                    sharedBox.style.stroke = '';
+                                    sharedBox.style.strokeWidth = '';
+                                }, 1000);
+                            }, 800);
+                        }, 800);
+                    }, 500);
+                }
+            }
+        }, 800);
+    }
+    
+    // Add pulsing animation to key concept elements
+    const keyConcepts = slide.querySelectorAll('.key-concept, .arabic-term');
+    if (keyConcepts.length) {
+        setTimeout(() => {
+            keyConcepts.forEach((concept, index) => {
+                setTimeout(() => {
+                    // Simple pulse animation
+                    concept.style.transform = 'scale(1.1)';
+                    concept.style.transition = 'transform 0.4s ease-in-out';
+                    
+                    setTimeout(() => {
+                        concept.style.transform = 'scale(1)';
+                    }, 400);
+                }, index * 300);
+            });
+        }, 1000);
+    }
+    
+    // Animate any logical argument containers with sequential reveal
+    const logicalContainer = slide.querySelector('.logical-argument-container');
+    if (logicalContainer) {
+        const steps = logicalContainer.querySelectorAll('.logical-step');
+        
+        if (steps.length) {
+            steps.forEach((step, index) => {
+                step.style.opacity = '0';
+                step.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    step.style.opacity = '1';
+                    step.style.transform = 'translateY(0)';
+                    step.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
+                }, 600 * index + 500);
+            });
+        }
+    }
+}
+</script>
+
+</body></html>

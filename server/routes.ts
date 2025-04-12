@@ -545,3 +545,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   return httpServer;
 }
+// Health check endpoint
+app.get('/health', (_, res) => {
+  res.status(200).json({ status: 'healthy' });
+});
